@@ -1,0 +1,59 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'stack'
+
+[params]
+    mainSections = ['posts']
+    featuredImageField = 'image'
+    rssFullContent = true
+    favicon = ''
+
+    [params.footer]
+        since = 2024
+        customText = ''
+
+    [params.dateFormat]
+        published = 'Jan 02, 2006'
+        lastUpdated = 'Jan 02, 2006 15:04 MST'
+
+    [params.sidebar]
+        emoji = '🍥'
+        subtitle = 'A simple blog'
+        avatar = ''
+
+    [params.article]
+        math = false
+        toc = true
+        readingTime = true
+
+    [params.comments]
+        enabled = false
+        provider = 'disqus'
+
+    [params.widgets]
+        enabled = ['archives', 'tag-cloud']
+
+        [params.widgets.archives]
+            limit = 5
+
+        [params.widgets.tagCloud]
+            limit = 10
+
+[menu]
+    [[menu.main]]
+        identifier = 'posts'
+        name = 'Posts'
+        url = '/posts'
+        weight = -100
+    [[menu.main]]
+            identifier = 'search'
+            name = 'Search'
+            url = '/search'
+            weight = -80
+        [[menu.main]]
+            identifier = 'about'
+            name = 'About'
+            url = '/about'
+            weight = -90
+    
