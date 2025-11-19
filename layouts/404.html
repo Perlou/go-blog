@@ -1,0 +1,169 @@
+{{ define "main" }}
+<main class="main full-width">
+  <article class="article-list--tile">
+    <header class="article-header">
+      <div class="article-details">
+        <h1 class="article-title">404 - 页面未找到</h1>
+        <p
+          style="
+            font-size: 1.2em;
+            color: var(--card-text-color-secondary);
+            margin: 20px 0;
+          "
+        >
+          😢 抱歉，你访问的页面不存在或已被移除。
+        </p>
+      </div>
+    </header>
+
+    <section
+      class="article-content"
+      style="text-align: center; padding: 40px 20px"
+    >
+      <div style="max-width: 600px; margin: 0 auto">
+        <h2 style="margin-bottom: 30px">你可以：</h2>
+
+        <div style="display: grid; gap: 20px; text-align: left">
+          <a
+            href="/"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              padding: 15px 20px;
+              background: var(--card-background);
+              border-radius: 8px;
+              text-decoration: none;
+              transition: transform 0.2s;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>回到首页</span>
+          </a>
+
+          <a
+            href="/search/"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              padding: 15px 20px;
+              background: var(--card-background);
+              border-radius: 8px;
+              text-decoration: none;
+              transition: transform 0.2s;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <span>搜索你想要的内容</span>
+          </a>
+
+          <a
+            href="/archives/"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              padding: 15px 20px;
+              background: var(--card-background);
+              border-radius: 8px;
+              text-decoration: none;
+              transition: transform 0.2s;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <span>浏览所有文章</span>
+          </a>
+        </div>
+
+        <div
+          style="
+            margin-top: 60px;
+            padding: 30px;
+            background: var(--card-background);
+            border-radius: 12px;
+          "
+        >
+          <h3 style="margin-bottom: 20px">🔥 热门文章</h3>
+          <div style="text-align: left; display: grid; gap: 15px">
+            {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+            <a
+              href="{{ .RelPermalink }}"
+              style="
+                display: block;
+                padding: 12px;
+                background: var(--body-background);
+                border-radius: 6px;
+                text-decoration: none;
+                transition: transform 0.2s;
+              "
+            >
+              <div style="font-weight: 500; margin-bottom: 5px">
+                {{ .Title }}
+              </div>
+              <div
+                style="
+                  font-size: 0.9em;
+                  color: var(--card-text-color-secondary);
+                "
+              >
+                {{ .Date.Format "2006-01-02" }}
+              </div>
+            </a>
+            {{ end }}
+          </div>
+        </div>
+
+        <p
+          style="
+            margin-top: 40px;
+            color: var(--card-text-color-tertiary);
+            font-size: 0.9em;
+          "
+        >
+          如果你认为这是一个 bug，请<a href="/about/">联系我</a>。
+        </p>
+      </div>
+    </section>
+  </article>
+</main>
+{{ end }}

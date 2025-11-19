@@ -1,0 +1,39 @@
+/* 自定义字体加载 */
+@import url("https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+/* 应用自定义字体 */
+:root {
+  --article-font-family: "LXGW WenKai", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", sans-serif;
+  --code-font-family: "JetBrains Mono", "Consolas", "Monaco", "Courier New",
+    monospace;
+}
+
+/* 文章正文字体 */
+.article-content {
+  font-family: var(--article-font-family);
+  line-height: 1.8;
+}
+
+/* 代码字体 */
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--code-font-family);
+}
+
+/* 优化代码块样式 */
+pre code {
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+/* 行内代码 */
+:not(pre) > code {
+  font-family: var(--code-font-family);
+  font-size: 0.9em;
+  padding: 2px 6px;
+  border-radius: 3px;
+}

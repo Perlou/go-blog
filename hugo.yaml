@@ -95,6 +95,15 @@ params:
     share:
       enabled: true
 
+  # 自定义字体优化
+  customFonts:
+    # 中文字体：霞鹜文楷，优雅的中文阅读字体
+    # 备选：思源黑体 'Noto Sans SC'
+    article: "'LXGW WenKai', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif"
+    # 代码字体：JetBrains Mono，专为开发者设计
+    # 备选：'Fira Code', 'Cascadia Code'
+    code: "'JetBrains Mono', 'Consolas', 'Monaco', 'Courier New', monospace"
+
   comments:
     enabled: true
     provider: giscus
