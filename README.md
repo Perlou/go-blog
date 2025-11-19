@@ -111,7 +111,23 @@ hugo --minify
 
 生成的静态文件位于 `public/` 目录。
 
-### 部署选项
+### Docker 部署（推荐）
+
+本项目已配置完整的 Docker 和 GitHub Actions CI/CD 流程。
+
+**详细部署指南请参考：[DEPLOYMENT.md](DEPLOYMENT.md)**
+
+快速部署：
+
+```bash
+# 构建 Docker 镜像
+docker build -t go-blog:latest .
+
+# 启动容器
+docker-compose up -d
+```
+
+### 其他部署选项
 
 - **GitHub Pages**：将 `public/` 目录推送到 GitHub Pages
 - **Netlify**：连接 Git 仓库自动部署

@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  blog:
+    image: go-blog:latest
+    container_name: perlou-blog
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    networks:
+      - blog-network
+
+networks:
+  blog-network:
+    driver: bridge

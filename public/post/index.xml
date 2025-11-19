@@ -2,34 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Perlou</title>
-        <link>//localhost:1313/post/</link>
+        <link>http://localhost:1313/post/</link>
         <description>Recent content in Posts on Perlou</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Perlou</copyright>
-        <lastBuildDate>Wed, 19 Nov 2025 13:45:49 +0800</lastBuildDate><atom:link href="//localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>午后的随想</title>
-        <link>//localhost:1313/p/%E5%8D%88%E5%90%8E%E7%9A%84%E9%9A%8F%E6%83%B3/</link>
-        <pubDate>Wed, 19 Nov 2025 13:45:49 +0800</pubDate>
-        
-        <guid>//localhost:1313/p/%E5%8D%88%E5%90%8E%E7%9A%84%E9%9A%8F%E6%83%B3/</guid>
-        <description>&lt;p&gt;窗外的阳光透过薄薄的云层洒进来，在书桌上投下斑驳的光影。这是一个普通的冬日午后，却莫名地让人想要记录些什么。&lt;/p&gt;
-&lt;h2 id=&#34;关于时间&#34;&gt;关于时间
-&lt;/h2&gt;&lt;p&gt;最近总在思考时间这个概念。我们创造了钟表、日历，用数字来度量时间的流逝，但时间本身却从未因为我们的度量而改变。它既是最公平的，给每个人一天都是 24 小时；又是最不公平的，因为每个人对时间的感知是如此不同。&lt;/p&gt;
-&lt;p&gt;小时候总觉得一个暑假漫长得像一个世纪，现在却常常感叹一年怎么就这样过去了。或许不是时间变快了，而是我们陷入了某种循环，日复一日的相似让大脑判断它们为&amp;quot;已知&amp;quot;，于是就被压缩进了记忆的角落。&lt;/p&gt;
-&lt;h2 id=&#34;关于代码&#34;&gt;关于代码
-&lt;/h2&gt;&lt;p&gt;作为一个程序员，每天和代码打交道。代码是一种奇特的存在——它既是逻辑的，又是感性的。&lt;/p&gt;
-&lt;p&gt;好的代码就像一首诗，简洁、优雅、富有韵律。当你看到一段精心设计的算法，或是一个恰到好处的抽象时，会由衷地感到欣喜。那种美感不亚于看到一幅画作或听到一段旋律。&lt;/p&gt;
-&lt;p&gt;但更多时候，我们要面对的是没那么优雅的代码——充满了技术债、权宜之计和历史包袱。这大概也是编程的真实面貌：在理想和现实之间寻找平衡，在限制条件下做出最合理的选择。&lt;/p&gt;
-&lt;h2 id=&#34;关于学习&#34;&gt;关于学习
-&lt;/h2&gt;&lt;p&gt;学习新东西的过程总是相似的：最初的兴奋、遭遇困难时的沮丧、突破瓶颈后的欣喜，然后是漫长的巩固和深化。&lt;/p&gt;
-&lt;p&gt;最近在研究操作系统的虚拟内存机制，越学越觉得计算机科学的基础知识是如此重要。那些看似陈旧的概念——页表、TLB、缓存——至今仍在支撑着我们日常使用的所有软件。站在巨人的肩膀上，我们才能构建出今天这样复杂的软件系统。&lt;/p&gt;
-&lt;p&gt;有时候会想，学习的意义到底是什么？或许就是为了在这个快速变化的世界里，保持某种确定性。技术在变，框架在变，但底层的原理、思考的方式是相对恒定的。掌握了这些，就能以不变应万变。&lt;/p&gt;
-&lt;h2 id=&#34;结语&#34;&gt;结语
-&lt;/h2&gt;&lt;p&gt;写随笔的好处大概就在于此——不需要严谨的论证、不需要完整的结构，只是把此时此刻的想法记录下来。多年以后回头看，或许会觉得幼稚，或许会会心一笑，但这些文字会提醒我：在某个午后，我曾这样思考过。&lt;/p&gt;
-&lt;p&gt;这就够了。&lt;/p&gt;
-</description>
-        </item>
-        
+        <lastBuildDate></lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

@@ -2,34 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on Perlou</title>
-        <link>//localhost:1313/page/</link>
+        <link>http://localhost:1313/page/</link>
         <description>Recent content in Pages on Perlou</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Perlou</copyright><atom:link href="//localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>Perlou</copyright><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>关于</title>
-        <link>//localhost:1313/%E5%85%B3%E4%BA%8E/</link>
+        <link>http://localhost:1313/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>//localhost:1313/%E5%85%B3%E4%BA%8E/</guid>
-        <description>&lt;p&gt;Hello, I am Perlou.&lt;/p&gt;
-&lt;p&gt;slow is fast.&lt;/p&gt;
+        <guid>http://localhost:1313/%E5%85%B3%E4%BA%8E/</guid>
+        <description>&lt;p&gt;Hi, 我是 Perlou, 主业前端, 后端略懂, 半吊子全栈工程师.&lt;/p&gt;
+&lt;p&gt;我的 github: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Perlou&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Perlou&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我的邮箱: &lt;a class=&#34;link&#34; href=&#34;mailto:perloukevin@gmail.com&#34; &gt;perloukevin@gmail.com&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>归档</title>
-        <link>//localhost:1313/%E5%BD%92%E6%A1%A3/</link>
+        <link>http://localhost:1313/%E5%BD%92%E6%A1%A3/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>//localhost:1313/%E5%BD%92%E6%A1%A3/</guid>
+        <guid>http://localhost:1313/%E5%BD%92%E6%A1%A3/</guid>
         <description></description>
         </item>
         <item>
         <title>搜索</title>
-        <link>//localhost:1313/%E6%90%9C%E7%B4%A2/</link>
+        <link>http://localhost:1313/%E6%90%9C%E7%B4%A2/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>//localhost:1313/%E6%90%9C%E7%B4%A2/</guid>
+        <guid>http://localhost:1313/%E6%90%9C%E7%B4%A2/</guid>
         <description></description>
         </item>
         

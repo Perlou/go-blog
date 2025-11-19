@@ -1,2 +1,6 @@
 public
 resources
+
+# Docker
+*.tar
+.DS_Store
