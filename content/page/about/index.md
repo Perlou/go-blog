@@ -8,6 +8,8 @@ menu:
       icon: user
 ---
 
-Hello, I am Perlou.
+Hi, 我是 Perlou, 主业前端, 后端略懂, 半吊子全栈工程师.
 
-slow is fast.
+我的 github: https://github.com/Perlou
+
+我的邮箱: perloukevin@gmail.com

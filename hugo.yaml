@@ -41,7 +41,7 @@ params:
     - post
   featuredImageField: image
   rssFullContent: true
-  favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+  favicon: favicon.ico?v=2
 
   footer:
     since: 2020
