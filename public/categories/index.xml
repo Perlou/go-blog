@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Categories on My New Hugo Site</title>
-        <link>http://localhost:1313/categories/</link>
-        <description>Recent content in Categories on My New Hugo Site</description>
+        <title>Categories on Perlou</title>
+        <link>//localhost:1313/categories/</link>
+        <description>Recent content in Categories on Perlou</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+        <language>zh-cn</language>
+        <copyright>Perlou</copyright>
+        <lastBuildDate>Wed, 19 Nov 2025 12:07:13 +0800</lastBuildDate><atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Rust</title>
+        <link>//localhost:1313/categories/rust/</link>
+        <pubDate>Wed, 19 Nov 2025 12:07:13 +0800</pubDate>
+        
+        <guid>//localhost:1313/categories/rust/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Test</title>
+        <link>//localhost:1313/categories/test/</link>
+        <pubDate>Wed, 19 Nov 2025 12:00:00 +0800</pubDate>
+        
+        <guid>//localhost:1313/categories/test/</guid>
+        <description></description>
+        </item>
+        
     </channel>
 </rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Test on Perlou</title>
+        <link>//localhost:1313/categories/test/</link>
+        <description>Recent content in Test on Perlou</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Perlou</copyright>
+        <lastBuildDate>Wed, 19 Nov 2025 12:00:00 +0800</lastBuildDate><atom:link href="//localhost:1313/categories/test/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hello World</title>
+        <link>//localhost:1313/p/hello-world/</link>
+        <pubDate>Wed, 19 Nov 2025 12:00:00 +0800</pubDate>
+        
+        <guid>//localhost:1313/p/hello-world/</guid>
+        <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello World
+&lt;/h1&gt;&lt;p&gt;This is my first post on the new blog.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
