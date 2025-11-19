@@ -1,7 +1,8 @@
-
+`+++
 date = '2024-09-12T16:45:00+08:00'
 draft = false
 title = 'AI 模型微调（Fine-tuning）完全指南'
+image = '/images/covers/fine-tuning.png'
 categories = ['AI 开发']
 tags = ['Fine-tuning', '模型训练', '机器学习']
 +++
@@ -44,7 +45,7 @@ trainer = Trainer(
 )
 
 trainer.train()
-````
+```
 
 ### 2. 参数高效微调（PEFT）
 
@@ -52,7 +53,7 @@ trainer.train()
 
 只训练少量参数：
 
-```python
+````python
 from peft import LoraConfig, get_peft_model
 
 config = LoraConfig(
@@ -335,3 +336,4 @@ trainer.save_model("./sentiment_model_final")
 ## 总结
 
 模型微调是 AI 应用落地的关键技术。选择合适的微调方法，准备高质量的数据，设置合理的超参数，就能获得优秀的模型表现。记住：没有万能的配置，需要根据具体任务不断实验和调优。
+````

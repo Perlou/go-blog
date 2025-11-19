@@ -1,9 +1,9 @@
-
 +++
 date = '2024-11-05T11:00:00+08:00'
 draft = false
-title = '向量数据库在 AI 应用中的实践'
-categories = ['AI 开发']
+title = '向量数据库在AI应用中的实践'
+image = '/images/covers/vector-database.png'
+categories = ['AI开发']
 tags = ['向量数据库', 'RAG', '数据工程']
 +++
 
@@ -23,7 +23,7 @@ from sentence_transformers import SentenceTransformer
 model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')
 embedding = model.encode("这是一段文本")
 # 输出：[0.123, -0.456, 0.789, ...] (384维)
-````
+```
 
 **相似度计算**：
 
@@ -37,7 +37,7 @@ embedding = model.encode("这是一段文本")
 
 轻量级、易用：
 
-```python
+````python
 import chromadb
 from chromadb.config import Settings
 
@@ -342,3 +342,4 @@ A: 权衡性能和效果，通常 384-1536 维，更高维度效果更好但成�
 ## 总结
 
 向量数据库是构建 AI 应用的基础设施。选择合适的向量数据库，优化 embedding 和检索策略，可以构建高效的语义搜索和 RAG 系统。关键是根据实际需求平衡性能、成本和效果。
+````

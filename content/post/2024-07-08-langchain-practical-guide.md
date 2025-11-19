@@ -1,10 +1,10 @@
-
 +++
 date = '2024-07-08T09:15:00+08:00'
 draft = false
 title = '使用LangChain构建AI应用的实战经验'
-categories = ['AI 开发']
-tags = ['LangChain', 'AI 应用', 'Python']
+image = '/images/covers/langchain.png'
+categories = ['AI开发']
+tags = ['LangChain', 'AI应用', 'Python']
 +++
 
 LangChain 是一个强大的框架，用于开发由大语言模型驱动的应用。本文分享使用 LangChain 构建 AI 应用的实战经验。
@@ -25,9 +25,9 @@ LangChain 提供了一系列组件和工具，简化了 AI 应用的开发流程
 
 ```bash
 pip install langchain openai chromadb
-````
+```
 
-```python
+````python
 from langchain.llms import OpenAI
 from langchain.chat_models import ChatOpenAI
 
@@ -289,3 +289,4 @@ llm = ChatOpenAI(
 ## 总结
 
 LangChain 大大简化了 AI 应用的开发。通过合理使用其组件和工具，可以快速构建强大的 AI 应用。关键是理解各个组件的作用，并根据实际需求灵活组合。
+````
