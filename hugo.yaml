@@ -50,6 +50,21 @@ params:
   rssFullContent: true
   favicon: favicon.ico?v=2
 
+  # SEO Optimization
+  description: "前端工程师 Perlou 的技术博客，分享 Vue、React、Go、全栈开发和 AI 应用经验"
+  keywords:
+    - 前端开发
+    - Vue
+    - React
+    - Go
+    - 全栈开发
+    - AI开发
+    - LangChain
+    - 技术博客
+  author: Perlou
+  images:
+    - https://avatars.githubusercontent.com/u/12897436?v=4
+
   footer:
     since: 2020
     customText:
@@ -128,17 +143,14 @@ params:
 
   opengraph:
     twitter:
-      # Your Twitter username
-      site:
-
-      # Available values: summary, summary_large_image
+      site: "@perlou666"
       card: summary_large_image
 
   defaultImage:
     opengraph:
-      enabled: false
+      enabled: true
       local: false
-      src:
+      src: https://avatars.githubusercontent.com/u/12897436?v=4
 
   colorScheme:
     # Display toggle
