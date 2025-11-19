@@ -39,6 +39,17 @@ services:
 pagination:
   pagerSize: 5
 
+# 性能优化：压缩输出文件
+minify:
+  minifyOutput: true
+  tdewolff:
+    html:
+      keepWhitespace: false
+    css:
+      precision: 2
+    js:
+      precision: 1
+
 permalinks:
   post: /p/:slug/
   page: /:slug/
