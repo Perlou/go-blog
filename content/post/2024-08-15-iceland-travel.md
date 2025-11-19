@@ -2,7 +2,7 @@
 date = '2024-08-15T14:30:00+08:00'
 draft = false
 title = '冰岛之旅：追寻极光与冰川的梦幻之地'
-image = '/images/iceland/aurora.png'
+image = '/images/iceland/aurora.jpg'
 categories = ['旅行']
 tags = ['冰岛', '极光', '旅行', '摄影']
 +++
@@ -11,7 +11,7 @@ tags = ['冰岛', '极光', '旅行', '摄影']
 
 ## 🌌 极光之夜
 
-![冰岛极光](/images/iceland/aurora.png)
+![冰岛极光](/images/iceland/aurora.jpg)
 
 来到冰岛的第一晚，我就被眼前的景象震撼了。绿色和紫色的光带在夜空中舞动，仿佛天空的丝绸在风中飘扬。极光（Aurora Borealis）不是照片能完全捕捉的美，它是一种需要用心灵去感受的奇迹。
 
@@ -29,7 +29,7 @@ tags = ['冰岛', '极光', '旅行', '摄影']
 
 ## 💧 斯科加瀑布的壮丽
 
-![斯科加瀑布](/images/iceland/waterfall.png)
+![斯科加瀑布](/images/iceland/waterfall.jpg)
 
 Skógafoss（斯科加瀑布）是冰岛最著名的瀑布之一。60 米的落差，数十米宽的水幕，震耳欲聋的轰鸣声...
 
@@ -41,7 +41,7 @@ Skógafoss（斯科加瀑布）是冰岛最著名的瀑布之一。60 米的落�
 
 ## 🏞️ 蓝湖温泉的惬意
 
-![蓝湖温泉](/images/iceland/blue-lagoon.png)
+![蓝湖温泉](/images/iceland/blue-lagoon.jpg)
 
 Blue Lagoon（蓝湖）是冰岛最著名的地热温泉。乳蓝色的温泉水富含矿物质，对皮肤特别好。
 
@@ -59,7 +59,7 @@ Blue Lagoon（蓝湖）是冰岛最著名的地热温泉。乳蓝色的温泉水
 
 ## ❄️ 冰川洞穴的蓝色魔法
 
-![冰川洞穴](/images/iceland/glacier.png)
+![冰川洞穴](/images/iceland/glacier.jpg)
 
 Vatnajökull（瓦特纳冰川）的冰洞探险是此行最难忘的经历。
 

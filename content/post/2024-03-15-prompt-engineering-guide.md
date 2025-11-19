@@ -2,7 +2,7 @@
 date = '2024-03-15T10:30:00+08:00'
 draft = false
 title = 'GPT模型的提示工程实践指南'
-image = '/images/covers/prompt-engineering.png'
+image = '/images/covers/llm-api-testing.jpg'
 categories = ['AI开发']
 tags = ['GPT', '提示工程', '最佳实践']
 +++

@@ -2,7 +2,7 @@
 date = '2024-11-05T11:00:00+08:00'
 draft = false
 title = '向量数据库在AI应用中的实践'
-image = '/images/covers/vector-database.png'
+image = '/images/covers/vector-database.jpg'
 categories = ['AI开发']
 tags = ['向量数据库', 'RAG', '数据工程']
 +++

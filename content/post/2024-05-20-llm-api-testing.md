@@ -2,7 +2,7 @@
 date = '2024-05-20T14:20:00+08:00'
 draft = false
 title = '大模型API测试最佳实践'
-image = '/images/covers/llm-api-testing.png'
+image = '/images/covers/llm-api-testing.jpg'
 categories = ['AI开发']
 tags = ['API测试', '自动化测试', 'LLM']
 +++
