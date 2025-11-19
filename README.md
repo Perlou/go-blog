@@ -64,7 +64,55 @@ tags = ['标签1', '标签2']
 
 将文章的 `draft` 从 `true` 改为 `false`，或者直接删除该行。
 
-## 📁 项目结构
+## � 发布工作流
+
+本项目使用**手动触发**的 CI/CD 流程，让你完全掌控何时部署。
+
+### 快速发布
+
+```bash
+./publish.sh
+```
+
+这个脚本会自动：
+
+1. 📋 检查并显示所有改动
+2. 💬 提示输入提交信息
+3. 📦 提交并推送代码到 GitHub
+4. 🚀 自动触发部署到生产环境
+
+### 日常开发 vs 发布上线
+
+**日常开发**（不触发部署）：
+
+```bash
+git add .
+git commit -m "draft: 正在写文章..."
+git push
+```
+
+**发布上线**（触发部署）：
+
+```bash
+./publish.sh
+# 输入：post: 发布新文章《标题》
+```
+
+### 前置要求
+
+需要安装 GitHub CLI 以实现自动触发：
+
+```bash
+# 安装
+brew install gh
+
+# 登录
+gh auth login
+```
+
+详细说明请参考：[PUBLISH_WORKFLOW.md](PUBLISH_WORKFLOW.md)
+
+## �📁 项目结构
 
 ```
 .
@@ -103,21 +151,32 @@ tags = ['标签1', '标签2']
 
 ## 📦 部署
 
-### 构建静态文件
+### 自动化部署（推荐）
 
-```bash
-hugo --minify
+本项目已配置完整的 **Docker + GitHub Actions** 自动化部署流程。
+
+#### 部署流程
+
+```
+./publish.sh → GitHub Actions → Docker 构建 → 部署到服务器 → 自动上线
 ```
 
-生成的静态文件位于 `public/` 目录。
+**特点**：
 
-### Docker 部署（推荐）
+- ✅ 手动触发，完全可控
+- ✅ 自动构建 Docker 镜像
+- ✅ 自动传输并部署到服务器
+- ✅ 零停机更新
 
-本项目已配置完整的 Docker 和 GitHub Actions CI/CD 流程。
+**详细部署指南**：
 
-**详细部署指南请参考：[DEPLOYMENT.md](DEPLOYMENT.md)**
+- [PUBLISH_WORKFLOW.md](PUBLISH_WORKFLOW.md) - 发布工作流说明
+- [DEPLOYMENT.md](DEPLOYMENT.md) - 服务器部署指南
+- [GITHUB_SECRETS_SETUP.md](GITHUB_SECRETS_SETUP.md) - GitHub Secrets 配置
 
-快速部署：
+### 手动部署
+
+如果需要手动部署：
 
 ```bash
 # 构建 Docker 镜像
@@ -127,7 +186,13 @@ docker build -t go-blog:latest .
 docker-compose up -d
 ```
 
-### 其他部署选项
+### 构建静态文件
+
+```bash
+hugo --minify
+```
+
+生成的静态文件位于 `public/` 目录。
 
 - **GitHub Pages**：将 `public/` 目录推送到 GitHub Pages
 - **Netlify**：连接 Git 仓库自动部署
