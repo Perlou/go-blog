@@ -1,0 +1,76 @@
+{{ $image := partial "helper/image" (dict "Context" . "Type" "articleList") }}
+<article class="{{ if $image.exists }}has-image{{ end }}">
+  {{- $link := .RelPermalink -}} {{- with .Params.link -}}{{ $link = . }}{{- end
+  }}
+  <a href="{{ $link }}" {{ with .Params.link }}target="_blank" {{ end }}>
+    {{- if $image.exists -}}
+    <div class="article-image">
+      {{- if $image.resource -}} {{- /* 优化：主页文章列表使用裁剪图片 */ -}}
+      {{- $thumbnail := $image.resource.Fill "800x450 q85 Smart" -}} {{- if eq
+      (path.Ext $thumbnail.RelPermalink) ".svg" -}}
+      <img
+        src="{{ $thumbnail.RelPermalink }}"
+        loading="lazy"
+        data-key="{{ .context.Slug }}"
+        data-hash="{{ $thumbnail.RelPermalink }}"
+      />
+      {{- else -}} {{- /* 生成响应式图片 */ -}} {{- $thumbnail480 :=
+      $image.resource.Fill "480x270 q80 Smart" -}} {{- $thumbnail720 :=
+      $image.resource.Fill "720x405 q85 Smart" -}} {{- $thumbnail800 :=
+      $image.resource.Fill "800x450 q85 Smart" -}}
+      <img
+        src="{{ $thumbnail800.RelPermalink }}"
+        srcset="{{ $thumbnail480.RelPermalink }} 480w,
+                                     {{ $thumbnail720.RelPermalink }} 720w,
+                                     {{ $thumbnail800.RelPermalink }} 800w"
+        sizes="(max-width: 480px) 480px, (max-width: 720px) 720px, 800px"
+        loading="lazy"
+        data-key="{{ .context.Slug }}"
+        data-hash="{{ $thumbnail800.RelPermalink }}"
+        alt="Featured image of post {{ .Title }}"
+      />
+      {{- end -}} {{- else -}}
+      <img
+        src="{{ $image.permalink }}"
+        loading="lazy"
+        data-key="{{ .context.Slug }}"
+        data-hash="{{ $image.permalink }}"
+      />
+      {{- end -}}
+    </div>
+    {{- end -}}
+    <div class="article-details">
+      <h2 class="article-title">{{ .Title }}</h2>
+      {{- if or .Params.description .Summary -}}
+      <section class="article-preview">
+        {{- if .Params.description -}} {{ .Params.description }} {{- else -}} {{
+        .Summary }} {{- end -}}
+      </section>
+      {{- end -}}
+      <footer class="article-time">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-clock"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" />
+            <circle cx="12" cy="12" r="9" />
+            <polyline points="12 7 12 12 15 15" />
+          </svg>
+          <time
+            >{{ .Date.Format (default "January 02, 2006"
+            .Site.Params.dateFormat.published) }}</time
+          >
+        </div>
+      </footer>
+    </div>
+  </a>
+</article>

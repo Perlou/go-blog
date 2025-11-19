@@ -1,0 +1,50 @@
+{{ $image := partial "helper/image" (dict "Context" . "Type" "articleList") }}
+<article class="{{- with .Params.image }}has-image {{ end }}">
+  {{- $link := .RelPermalink -}} {{- with .Params.link -}} {{- $link = . -}} {{-
+  end }}
+  <a href="{{ $link }}" {{ with .Params.link }}target="_blank" {{ end }}>
+    {{- if $image.exists -}}
+    <div class="article-image">
+      {{- if $image.resource -}} {{- /* 优化：为归档页缩略图裁剪图片 */ -}} {{-
+      $thumbnail := $image.resource.Fill "300x200 q80 Smart" -}} {{- if eq
+      (path.Ext $thumbnail.RelPermalink) ".svg" -}}
+      <img
+        src="{{ $thumbnail.RelPermalink }}"
+        loading="lazy"
+        alt="Featured image of post {{ .Title }}"
+      />
+      {{- else -}} {{- /* 生成多个尺寸用于响应式 */ -}} {{- $thumbnail150 :=
+      $image.resource.Fill "150x100 q80 Smart" -}} {{- $thumbnail300 :=
+      $image.resource.Fill "300x200 q80 Smart" -}}
+      <img
+        src="{{ $thumbnail300.RelPermalink }}"
+        srcset="{{ $thumbnail150.RelPermalink }} 150w,
+                                     {{ $thumbnail300.RelPermalink }} 300w"
+        sizes="(max-width: 768px) 150px, 300px"
+        loading="lazy"
+        alt="Featured image of post {{ .Title }}"
+      />
+      {{- end -}} {{- else -}}
+      <img
+        src="{{ $image.permalink }}"
+        loading="lazy"
+        alt="Featured image of post {{ .Title }}"
+      />
+      {{- end -}}
+    </div>
+    {{- end -}}
+    <div class="article-details">
+      <h2 class="article-title">{{ .Title }}</h2>
+      {{- with .Params.description -}}
+      <footer class="article-time">{{ . }}</footer>
+      {{- else -}}
+      <footer class="article-time">
+        <time
+          >{{ .Date.Format (default "January 02, 2006"
+          .Site.Params.dateFormat.published) }}</time
+        >
+      </footer>
+      {{- end -}}
+    </div>
+  </a>
+</article>
