@@ -1,9 +1,9 @@
-+++
+````
 date = '2024-09-12T16:45:00+08:00'
 draft = false
-title = 'AI模型微调（Fine-tuning）完全指南'
-categories = ['AI测试']
-tags = ['AI测试']
+title = 'AI 模型微调（Fine-tuning）完全指南'
+categories = ['AI 开发']
+tags = ['Fine-tuning', '模型训练', '机器学习']
 +++
 
 模型微调是让预训练模型适应特定任务的关键技术。本文详细介绍 AI 模型微调的原理、方法和实践。
@@ -44,7 +44,7 @@ trainer = Trainer(
 )
 
 trainer.train()
-```
+````
 
 ### 2. 参数高效微调（PEFT）
 

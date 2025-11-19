@@ -2,8 +2,8 @@
 date = '2024-05-20T14:20:00+08:00'
 draft = false
 title = '大模型API测试最佳实践'
-categories = ['AI测试']
-tags = ['AI测试']
+categories = ['AI开发']
+tags = ['API测试', '自动化测试', 'LLM']
 +++
 
 随着大语言模型的广泛应用，如何有效测试 AI API 成为开发者面临的重要课题。本文总结了大模型 API 测试的方法和经验。

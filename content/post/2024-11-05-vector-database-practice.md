@@ -1,9 +1,10 @@
+````
 +++
 date = '2024-11-05T11:00:00+08:00'
 draft = false
-title = '向量数据库在AI应用中的实践'
-categories = ['AI测试']
-tags = ['AI测试']
+title = '向量数据库在 AI 应用中的实践'
+categories = ['AI 开发']
+tags = ['向量数据库', 'RAG', '数据工程']
 +++
 
 向量数据库（Vector Database）是 AI 应用的重要基础设施，特别是在 RAG（检索增强生成）场景中不可或缺。本文介绍向量数据库的原理和实践。
@@ -22,7 +23,7 @@ from sentence_transformers import SentenceTransformer
 model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')
 embedding = model.encode("这是一段文本")
 # 输出：[0.123, -0.456, 0.789, ...] (384维)
-```
+````
 
 **相似度计算**：
 
