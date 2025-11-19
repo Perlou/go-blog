@@ -166,8 +166,24 @@ params:
   imageProcessing:
     cover:
       enabled: true
+      relative: false
+      responsiveImages:
+        enabled: true
+        sizes:
+          - 480
+          - 720
+          - 1024
+          - 1440
+      quality: 85
     content:
       enabled: true
+      responsiveImages:
+        enabled: true
+        sizes:
+          - 480
+          - 720
+          - 1024
+      quality: 80
 
 ### Custom menu
 ### See https://stack.jimmycai.com/config/menu
