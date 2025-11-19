@@ -1,4 +1,4 @@
-````
+
 date = '2024-09-12T16:45:00+08:00'
 draft = false
 title = 'AI 模型微调（Fine-tuning）完全指南'
@@ -66,7 +66,7 @@ config = LoraConfig(
 model = get_peft_model(model, config)
 model.print_trainable_parameters()
 # trainable params: 294,912 || all params: 110,104,320 || trainable%: 0.27
-```
+
 
 #### Adapter
 
@@ -78,7 +78,7 @@ from transformers.adapters import AdapterConfig
 config = AdapterConfig.load("pfeiffer")
 model.add_adapter("task_adapter", config=config)
 model.train_adapter("task_adapter")
-```
+
 
 ### 3. 提示微调（Prompt Tuning）
 
@@ -95,7 +95,7 @@ config = PromptTuningConfig(
 )
 
 model = get_peft_model(model, config)
-```
+
 
 ## 数据准备
 
@@ -116,7 +116,7 @@ dataset = Dataset.from_dict({
     "text": [d["text"] for d in train_data],
     "label": [d["label"] for d in train_data]
 })
-```
+
 
 ### 2. 数据增强
 
@@ -133,7 +133,7 @@ aug = naw.BackTranslationAug(
     to_model_name='Helsinki-NLP/opus-mt-en-zh'
 )
 augmented = aug.augment(text)
-```
+
 
 ### 3. 数据清洗
 
@@ -148,7 +148,7 @@ def clean_text(text):
     return text
 
 dataset = dataset.map(lambda x: {"text": clean_text(x["text"])})
-```
+
 
 ## 训练配置
 
@@ -174,7 +174,7 @@ training_args = TrainingArguments(
     load_best_model_at_end=True,
     metric_for_best_model="accuracy"
 )
-```
+
 
 ### 学习率调度
 
@@ -187,7 +187,7 @@ scheduler = get_scheduler(
     num_warmup_steps=num_warmup_steps,
     num_training_steps=num_training_steps
 )
-```
+
 
 ## 评估与优化
 
@@ -211,7 +211,7 @@ def compute_metrics(pred):
         'precision': precision,
         'recall': recall
     }
-```
+
 
 ### 2. 早停
 
@@ -222,7 +222,7 @@ trainer = Trainer(
     # ...
     callbacks=[EarlyStoppingCallback(early_stopping_patience=3)]
 )
-```
+
 
 ### 3. 混淆矩阵
 
@@ -237,7 +237,7 @@ preds = predictions.predictions.argmax(-1)
 cm = confusion_matrix(test_dataset['label'], preds)
 sns.heatmap(cm, annot=True, fmt='d')
 plt.show()
-```
+
 
 ## 实战案例：情感分类微调
 
@@ -298,7 +298,7 @@ trainer.train()
 
 # 6. 保存模型
 trainer.save_model("./sentiment_model_final")
-```
+
 
 ## 最佳实践
 

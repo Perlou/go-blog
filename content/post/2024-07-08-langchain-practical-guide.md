@@ -1,4 +1,4 @@
-````
+
 +++
 date = '2024-07-08T09:15:00+08:00'
 draft = false
@@ -34,7 +34,7 @@ from langchain.chat_models import ChatOpenAI
 # 初始化模型
 llm = OpenAI(temperature=0.7)
 chat_model = ChatOpenAI(model="gpt-3.5-turbo")
-```
+
 
 ### 2. 提示模板
 
@@ -63,7 +63,7 @@ formatted_prompt = prompt.format(
     context="用户想学习异步编程",
     question="什么是asyncio？"
 )
-```
+
 
 ### 3. 链式调用
 
@@ -100,7 +100,7 @@ overall_chain = SequentialChain(
 )
 
 result = overall_chain({"topic": "机器学习入门"})
-```
+
 
 ## 高级功能
 
@@ -138,7 +138,7 @@ agent = initialize_agent(
 
 # 使用代理
 result = agent.run("2024年世界人口是多少？")
-```
+
 
 ### 2. 记忆管理
 
@@ -160,7 +160,7 @@ conversation = ConversationChain(
 conversation.predict(input="我的名字是小明")
 conversation.predict(input="我刚才说我叫什么？")
 # 输出：你说你叫小明
-```
+
 
 ### 3. 向量数据库
 
@@ -192,7 +192,7 @@ db = Chroma.from_documents(docs, embeddings)
 # 相似度搜索
 results = db.similarity_search("Web开发用什么语言？")
 print(results[0].page_content)  # JavaScript用于Web开发
-```
+
 
 ### 4. RAG（检索增强生成）
 
@@ -209,7 +209,7 @@ qa_chain = RetrievalQA.from_chain_type(
 # 基于文档回答问题
 answer = qa_chain.run("哪种语言适合并发编程？")
 print(answer)  # Go语言适合并发编程
-```
+
 
 ## 实战案例：文档问答系统
 
@@ -247,7 +247,7 @@ class DocumentQA:
 # 使用
 doc_qa = DocumentQA("technical_doc.txt")
 answer = doc_qa.ask("API的认证方式是什么？")
-```
+
 
 ## 性能优化
 
@@ -258,14 +258,14 @@ from langchain.cache import InMemoryCache
 import langchain
 
 langchain.llm_cache = InMemoryCache()
-```
+
 
 ### 2. 批量处理
 
 ```python
 questions = ["问题1", "问题2", "问题3"]
 results = llm.generate(questions)
-```
+
 
 ### 3. 流式输出
 
@@ -276,7 +276,7 @@ llm = ChatOpenAI(
     streaming=True,
     callbacks=[StreamingStdOutCallbackHandler()]
 )
-```
+
 
 ## 最佳实践
 

@@ -1,4 +1,4 @@
-````
+
 +++
 date = '2024-11-05T11:00:00+08:00'
 draft = false
@@ -62,7 +62,7 @@ results = collection.query(
     query_texts=["相关的文本"],
     n_results=2
 )
-```
+
 
 ### 2. Pinecone
 
@@ -92,7 +92,7 @@ results = index.query(
     top_k=5,
     include_metadata=True
 )
-```
+
 
 ### 3. Milvus
 
@@ -139,7 +139,7 @@ results = collection.search(
     param=search_params,
     limit=5
 )
-```
+
 
 ## 实战：构建文档问答系统
 
@@ -160,7 +160,7 @@ text_splitter = RecursiveCharacterTextSplitter(
     separators=["\n\n", "\n", "。", "！", "？", " ", ""]
 )
 chunks = text_splitter.split_documents(pages)
-```
+
 
 ### 2. 生成 Embedding
 
@@ -172,7 +172,7 @@ embeddings = OpenAIEmbeddings()
 # 批量生成
 texts = [chunk.page_content for chunk in chunks]
 vectors = embeddings.embed_documents(texts)
-```
+
 
 ### 3. 存储到向量数据库
 
@@ -184,7 +184,7 @@ vectorstore = Chroma.from_documents(
     embedding=embeddings,
     persist_directory="./chroma_db"
 )
-```
+
 
 ### 4. 检索与问答
 
@@ -210,7 +210,7 @@ qa_chain = RetrievalQA.from_chain_type(
 result = qa_chain({"query": "这个文档的主要内容是什么？"})
 print(result['result'])
 print(result['source_documents'])
-```
+
 
 ## 性能优化
 
@@ -225,7 +225,7 @@ index_params = {
         "nlist": 1024          # 聚类数量
     }
 }
-```
+
 
 ### 2. 查询优化
 
@@ -247,7 +247,7 @@ ensemble_retriever = EnsembleRetriever(
     retrievers=[bm25_retriever, vector_retriever],
     weights=[0.5, 0.5]
 )
-```
+
 
 ### 3. 缓存策略
 
@@ -257,7 +257,7 @@ from functools import lru_cache
 @lru_cache(maxsize=1000)
 def get_embedding(text):
     return embeddings.embed_query(text)
-```
+
 
 ## 评估与监控
 
@@ -289,7 +289,7 @@ def evaluate_retrieval(queries, ground_truth):
         'avg_precision': sum(precision_scores) / len(precision_scores),
         'avg_recall': sum(recall_scores) / len(recall_scores)
     }
-```
+
 
 ### 2. 性能监控
 
@@ -317,7 +317,7 @@ class VectorStoreMonitor:
             'avg_latency': sum(self.query_times) / len(self.query_times),
             'p95_latency': sorted(self.query_times)[int(len(self.query_times) * 0.95)]
         }
-```
+
 
 ## 最佳实践
 
