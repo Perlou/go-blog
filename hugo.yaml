@@ -61,7 +61,9 @@ params:
     - AI开发
     - LangChain
     - 技术博客
-  author: Perlou
+  author:
+    name: Perlou
+    email: perloukevin@gmail.com
   images:
     - https://avatars.githubusercontent.com/u/12897436?v=4
 
