@@ -1,7 +1,7 @@
 +++
 date = '2025-11-19T13:45:49+08:00'
-draft = true
-title = '午后的随想'
+draft = false
+title = '这是一篇AI生成的测试文章'
 categories = ['随笔']
 tags = ['生活', '随想']
 +++
