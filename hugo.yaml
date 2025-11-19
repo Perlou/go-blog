@@ -70,6 +70,8 @@ params:
     math: false
     toc: true
     readingTime: true
+    readingIndicator: true
+    featuredImagePreview: true
     license:
       enabled: true
       default: Licensed under CC BY-NC-SA 4.0
@@ -112,13 +114,13 @@ params:
   widgets:
     homepage:
       - type: search
-      - type: archives
+      - type: tag-cloud
         params:
-          limit: 5
+          limit: 10
       - type: categories
         params:
           limit: 10
-      - type: tag-cloud
+      - type: archives
         params:
           limit: 10
     page:
