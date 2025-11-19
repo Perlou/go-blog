@@ -176,6 +176,12 @@ menu:
       params:
         icon: brand-twitter
 
+    - identifier: rss
+      name: RSS
+      url: /index.xml
+      params:
+        icon: rss
+
 related:
   includeNewer: true
   threshold: 60
@@ -216,3 +222,6 @@ markup:
     lineNos: true
     lineNumbersInTable: true
     tabWidth: 4
+    # Enable copy button for code blocks
+    copy:
+      enable: true
