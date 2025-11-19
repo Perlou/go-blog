@@ -17,7 +17,9 @@ menu:
 
 ## 👋 你好，我是 Perlou
 
-一名热爱技术的开发者，专注于 AI 和后端开发。
+一名来自广州的**前端工程师**，拥有后端开发能力和全栈项目经验。
+
+我热衷于构建优雅的用户界面，同时也具备产品思维，关注用户体验和业务价值。
 
 **slow is fast** - 这是我的座右铭，相信扎实的基础比快速的进步更重要。
 
@@ -25,28 +27,54 @@ menu:
 
 ## 💻 技术栈
 
-### 编程语言
+### 前端开发 ⭐
 
-- **主力**：Python, Go, JavaScript/TypeScript
-- **学习中**：Rust
+- **核心框架**：Vue 3 / React
+- **TypeScript** 深度使用
+- **构建工具**：Vite, Webpack
+- **UI 库**：Element Plus, Ant Design
+- **状态管理**：Pinia, Redux
+- **工程化**：Monorepo, 组件库开发
 
 ### 后端开发
 
-- **框架**：Django, Flask, Gin
-- **数据库**：PostgreSQL, MySQL, Redis
-- **消息队列**：RabbitMQ, Kafka
+- **Go**: Gin 框架，微服务开发
+- **Node.js**: NestJS, Express
+- **数据库**: MySQL, PostgreSQL, Redis
+- **API 设计**: RESTful, GraphQL
 
-### AI/ML
+### 全栈经验
 
-- **大模型**：GPT, Claude, LangChain
-- **框架**：PyTorch, TensorFlow
-- **应用**：RAG, Fine-tuning, Agent
+- 🏗️ **go-vue-admin** - Go + Vue 3 全栈管理平台
+- 🌐 **carole-admin** - NestJS 全栈快速开发平台
+- 🔧 完整的前后端分离项目经验
 
-### DevOps
+### 正在学习
 
-- **容器化**：Docker, Kubernetes
-- **CI/CD**：GitHub Actions, GitLab CI
-- **云服务**：阿里云, AWS
+- 🦀 **Rust** - 系统编程语言探索
+- 🧠 **AI 应用** - 大模型集成与应用开发
+
+---
+
+## 🎯 能力特点
+
+### 产品思维
+
+- 关注用户体验和业务价值
+- 能够从产品角度思考技术方案
+- 擅长需求分析和功能设计
+
+### 项目管理
+
+- 参与过多个完整项目的交付
+- 熟悉敏捷开发流程
+- 具备团队协作和沟通能力
+
+### 工程化实践
+
+- 重视代码质量和可维护性
+- 熟练使用 Git, CI/CD
+- 注重自动化和效率提升
 
 ---
 
@@ -54,8 +82,8 @@ menu:
 
 这个博客是我的：
 
-- 📚 **知识库** - 记录学习笔记和技术心得
-- 💡 **思考空间** - 分享对技术和生活的思考
+- 📚 **技术笔记本** - 记录前端、后端学习心得
+- 💡 **思考空间** - 分享对技术和产品的看法
 - 🚀 **实践平台** - 尝试新技术和工具
 
 ### 技术栈
@@ -70,18 +98,44 @@ menu:
 
 ## 🎯 近期关注
 
-- 🤖 大语言模型应用开发
-- 🔧 系统设计与架构
-- 📊 数据工程
-- 🌐 Web3 技术
+- 🎨 **现代前端工程化** - Vite 生态、性能优化
+- 🔧 **全栈开发** - Go 微服务、云原生
+- 🤖 **AI 应用开发** - LLM 集成、智能工具
+- 💼 **产品与技术** - 如何平衡技术实现与用户价值
+
+---
+
+## 💼 代表项目
+
+### go-vue-admin
+
+Go + Vue 3 全栈后台管理系统
+
+- **技术栈**: Go, Gin, Vue 3, TypeScript, Element Plus
+- **特点**: 前后端分离、权限管理、代码生成器
+
+### go-gateway
+
+Go 微服务网关
+
+- **技术栈**: Go, 反向代理、负载均衡
+- **特点**: 高性能、可扩展
+
+### 个人主页
+
+基于 React + Three.js 的创意主页
+
+- **技术栈**: React, TypeScript, Three.js, Vite
+- **特点**: 3D 交互、动画效果
+- **链接**: [perlou.github.io](https://perlou.github.io)
 
 ---
 
 ## 📫 联系方式
 
-- **GitHub**: [@Perlou](https://github.com/Perlou)
+- **GitHub**: [@Perlou](https://github.com/Perlou) (66 repositories)
 - **X (Twitter)**: [@perlou666](https://x.com/perlou666)
-- **Email**: 通过评论区或 GitHub 联系我
+- **Email**: perloukevin@gmail.com
 
 欢迎通过任何方式与我交流！对文章有疑问或建议，也欢迎在评论区留言。
 
@@ -95,4 +149,4 @@ menu:
 
 ---
 
-_最后更新：2025 年 11 月_
+*最后更新：2025 年 11 月*1 月\_
