@@ -1,7 +1,8 @@
 +++
 date = '2025-11-19T13:02:37+08:00'
-draft = true
+draft = false
 title = '深入解析操作系统虚拟内存'
+image = '/images/iceland/waterfall.jpg'
 categories = ['操作系统']
 tags = ['操作系统']
 +++

@@ -2,6 +2,7 @@
 date = '2025-11-19T13:45:49+08:00'
 draft = false
 title = '这是一篇AI生成的测试文章'
+image = '/images/covers/llm-api-testing.jpg'
 categories = ['随笔']
 tags = ['生活', '随想']
 +++
