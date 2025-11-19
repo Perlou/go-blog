@@ -50,7 +50,7 @@ docker-compose --version
 如果你还没有 SSH 密钥对：
 
 ```bash
-ssh-keygen -t rsa -b 4096 -C "github-actions" -f ~/.ssh/github_actions_key
+ssh-keygen -t rsa -b 4096 -C "github-actions" -f ~/.ssh/github_actions_key -N ""
 ```
 
 这会生成两个文件：
