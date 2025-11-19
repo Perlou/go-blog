@@ -75,8 +75,39 @@ params:
       default: Licensed under CC BY-NC-SA 4.0
 
   comments:
-    enabled: false
-    provider: disqus
+    enabled: true
+    provider: giscus
+
+    disqusjs:
+      shortname:
+      apiUrl:
+      apiKey:
+      admin:
+      adminLabel:
+
+    utterances:
+      repo:
+      issueTerm: pathname
+      label:
+
+    beaudar:
+      repo:
+      issueTerm: pathname
+      label:
+      theme:
+
+    giscus:
+      repo: Perlou/go-blog
+      repoID: R_kgDOQWZv_w
+      category: Announcements
+      categoryID: DIC_kwDOQWZv_84Cx9yn
+      mapping: pathname
+      lightTheme: light
+      darkTheme: dark_dimmed
+      reactionsEnabled: 1
+      emitMetadata: 0
+      inputPosition: bottom
+      lang: zh-CN
 
   widgets:
     homepage:
