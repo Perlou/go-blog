@@ -5,26 +5,23 @@
   <a href="{{ $link }}" {{ with .Params.link }}target="_blank" {{ end }}>
     {{- if $image.exists -}}
     <div class="article-image">
-      {{- if $image.resource -}} {{- /* 优化：为归档页缩略图裁剪图片 */ -}} {{-
-      $thumbnail := $image.resource.Fill "300x200 q80 Smart" -}} {{- if eq
-      (path.Ext $thumbnail.RelPermalink) ".svg" -}}
+      {{- if $image.resource -}} {{- $Permalink := $image.resource.RelPermalink
+      -}} {{- $Width := $image.resource.Width -}} {{- $Height :=
+      $image.resource.Height -}} {{- if (default true
+      .Page.Site.Params.imageProcessing.cover.enabled) -}} {{- /*
+      优化：调整缩略图尺寸为 300x200，移动端 150x100 */ -}} {{- $thumbnail :=
+      $image.resource.Fill "300x200 q80 Smart" -}} {{- $Permalink =
+      $thumbnail.RelPermalink -}} {{- $Width = $thumbnail.Width -}} {{- $Height
+      = $thumbnail.Height -}} {{- end -}}
+
       <img
-        src="{{ $thumbnail.RelPermalink }}"
+        src="{{ $Permalink }}"
+        width="{{ $Width }}"
+        height="{{ $Height }}"
+        alt="{{ .Title }}"
         loading="lazy"
-        alt="Featured image of post {{ .Title }}"
       />
-      {{- else -}} {{- /* 生成多个尺寸用于响应式 */ -}} {{- $thumbnail150 :=
-      $image.resource.Fill "150x100 q80 Smart" -}} {{- $thumbnail300 :=
-      $image.resource.Fill "300x200 q80 Smart" -}}
-      <img
-        src="{{ $thumbnail300.RelPermalink }}"
-        srcset="{{ $thumbnail150.RelPermalink }} 150w,
-                                     {{ $thumbnail300.RelPermalink }} 300w"
-        sizes="(max-width: 768px) 150px, 300px"
-        loading="lazy"
-        alt="Featured image of post {{ .Title }}"
-      />
-      {{- end -}} {{- else -}}
+      {{- else -}}
       <img
         src="{{ $image.permalink }}"
         loading="lazy"
