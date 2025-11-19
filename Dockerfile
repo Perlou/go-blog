@@ -8,7 +8,7 @@ WORKDIR /src
 COPY . .
 
 # Build the Hugo site
-RUN hugo --minify
+RUN hugo --minify --baseURL https://perlou.top/
 
 # Stage 2: Serve with Nginx
 FROM nginx:alpine
