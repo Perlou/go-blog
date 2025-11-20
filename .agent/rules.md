@@ -66,10 +66,7 @@
 ├── DEPLOYMENT.md # 部署指南
 ├── PUBLISH_WORKFLOW.md # 发布工作流
 ├── GISCUS_SETUP_GUIDE.md # Giscus 配置指南
-├── GITHUB_SECRETS_SETUP.md # GitHub Secrets 配置
-├── ANALYTICS_SETUP.md # 分析工具配置
-├── IMAGE_OPTIMIZATION.md # 图片优化说明
-└── CLOUDFLARE_CDN_SETUP.md # Cloudflare CDN 配置
+└── CLOUDFLARE_DASHBOARD_GUIDE.md # Cloudflare 配置指南
 \`\`\`
 
 ## 编码规范与最佳实践
