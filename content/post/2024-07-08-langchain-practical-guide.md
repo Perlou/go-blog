@@ -1,6 +1,6 @@
 +++
 date = '2024-07-08T09:15:00+08:00'
-draft = false
+draft = true
 title = '使用LangChain构建AI应用的实战经验'
 image = '/images/covers/langchain.jpg'
 categories = ['AI开发']
