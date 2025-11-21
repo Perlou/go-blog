@@ -1,6 +1,6 @@
 +++
 date = '2024-03-15T10:30:00+08:00'
-draft = false
+draft = true
 title = 'GPT模型的提示工程实践指南'
 image = '/images/covers/prompt-engineering.jpg'
 categories = ['AI开发']
