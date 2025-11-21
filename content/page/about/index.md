@@ -15,7 +15,8 @@ menu:
       icon: user
 ---
 
-Hi！我是 Perlou。主业前端，后端略懂，半吊子全栈工程师
+Hi！我是 Perlou，INFJ-A </br>
+主业前端，后端略懂，半吊子全栈工程师
 
 ## 📫 联系方式
 
