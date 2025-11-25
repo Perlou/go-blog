@@ -1,5 +1,5 @@
 ---
-title: "友情链接"
+title: "友链"
 description: "推荐的技术博客和学习资源"
 date: "2025-11-19"
 aliases:
