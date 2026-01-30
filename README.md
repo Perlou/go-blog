@@ -2,7 +2,7 @@
 
 > slow is fast
 
-基于 Hugo + Stack 主题构建的现代化个人技术博客，专注于前端开发、全栈技术和 AI 应用。
+基于 Hugo + Stack 主题构建的现代化个人技术博客。
 
 🌐 **在线访问**：[perlou.top](https://perlou.top)
 
