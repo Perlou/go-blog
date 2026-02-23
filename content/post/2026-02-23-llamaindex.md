@@ -2290,7 +2290,3 @@ Level 4 - 专家 (持续)
 | 示例 Notebooks         | https://github.com/run-llama/llama_index/tree/main/docs/docs/examples |
 
 ---
-
-> **文档版本**: 基于 LlamaIndex v0.10+
->
-> **最后更新**: 2024年
