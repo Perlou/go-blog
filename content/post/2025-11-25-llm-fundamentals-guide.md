@@ -3,8 +3,8 @@ date = '2025-11-25T03:00:00+08:00'
 draft = false
 title = '大模型入门：原理、架构与实战思考'
 image = '/images/covers/llm-learning.jpg'
-categories = ['AI开发', '大模型']
-tags = ['LLM', 'RAG', 'Agents', '大模型']
+categories = ['AI', '技术']
+tags = ['AI', 'RAG', 'Agents', '大模型']
 +++
 
 在过去的一段时间里，我通过 [ai-learning-ts](https://github.com/Perlou/ai-learning-ts) 项目，从零开始构建了一套大模型学习路径。写代码的过程很有趣，但更让我着迷的是代码背后的原理。

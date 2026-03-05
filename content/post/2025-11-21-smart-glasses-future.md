@@ -3,7 +3,7 @@ date = '2025-11-21T22:30:00+08:00'
 draft = false
 title = '关于XR行业和AI智能眼镜的一些观察'
 image = '/images/covers/smart-glasses.jpg'
-categories = ['科技观察']
+categories = ['随笔', '投资']
 tags = ['XR', 'Meta Ray-Ban', 'Vision Pro', '空间计算', 'AI智能眼镜']
 +++
 

@@ -3,7 +3,7 @@ date = '2025-12-10T03:00:00+08:00'
 draft = false
 title = 'NumPy手册'
 image = '/images/iceland/aurora.jpg'
-categories = ['Python', 'NumPy']
+categories = ['Python', '技术']
 tags = ['Python', 'NumPy']
 +++
 

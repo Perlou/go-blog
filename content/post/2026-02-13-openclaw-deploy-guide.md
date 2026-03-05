@@ -3,8 +3,8 @@ date = '2026-02-13T22:08:01+08:00'
 draft = false
 title = 'OpenClaw 云服务器部署方案'
 image = '/images/bg/xinjiang-kanas.jpg'
-categories = ['AI', 'Agent']
-tags = ['AI', 'OpenClaw']
+categories = ['AI', '技术']
+tags = ['AI', 'Agents', 'OpenClaw']
 +++
 
 # OpenClaw 阿里云 ECS（日本）部署方案

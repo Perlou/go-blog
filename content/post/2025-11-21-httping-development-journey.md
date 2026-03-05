@@ -3,7 +3,7 @@ date = '2025-11-21T11:58:20+08:00'
 draft = false
 title = '基于 Google Antigravity 开发 Httping：一个轻量级 API 测试工具的诞生'
 image = '/images/covers/httping-project.svg'
-categories = ['技术分享']
+categories = ['技术']
 tags = ['开源项目', 'React', 'TypeScript', 'API测试', 'Cloudflare']
 +++
 

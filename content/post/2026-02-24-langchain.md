@@ -3,8 +3,8 @@ date = '2026-02-24T23:39:04+08:00'
 draft = false
 title = 'LangChain 深入解析：从零开始的完整指南'
 image = '/images/covers/langchain.jpg'
-categories = ['AI', 'Agent']
-tags = ['AI', 'LangChain']
+categories = ['AI', '技术']
+tags = ['AI', 'Agents', 'LangChain']
 +++
 
 # LangChain 深入解析：从零开始的完整指南

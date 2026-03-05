@@ -3,8 +3,8 @@ date = '2026-02-23T17:23:25+08:00'
 draft = false
 title = 'LlamaIndex 深入解析：从零到精通'
 image = '/images/bg/glacier-river.jpg'
-categories = ['AI', 'Agent']
-tags = ['AI', 'LlamaIndex']
+categories = ['AI', '技术']
+tags = ['AI', 'Agents', 'RAG', 'LlamaIndex']
 +++
 
 # LlamaIndex 深入解析：从零到精通

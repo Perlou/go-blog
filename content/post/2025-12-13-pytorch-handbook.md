@@ -3,8 +3,8 @@ date = '2025-12-13T06:00:00+08:00'
 draft = false
 title = 'PyTorch手册'
 image = '/images/iceland/glacier.jpg'
-categories = ['Python', 'PyTorch']
-tags = ['Python', 'PyTorch']
+categories = ['AI', '技术']
+tags = ['AI', '深度学习', 'Python', 'PyTorch']
 +++
 
 # PyTorch 常用函数与方法速查手册
