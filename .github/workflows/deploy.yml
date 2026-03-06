@@ -38,6 +38,5 @@ jobs:
             docker load -i go-blog.tar
             docker-compose down
             docker-compose up -d
-            docker system prune -f
             rm go-blog.tar
           EOF
