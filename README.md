@@ -44,10 +44,17 @@ hugo new content/post/YYYY-MM-DD-article-title.md
 date = '2025-11-20T10:00:00+08:00'
 draft = false
 title = '文章标题'
+image = '/images/bg/your-image.webp'
 categories = ['技术']
 tags = ['Hugo', 'Blog']
 +++
 ```
+
+### 封面图片
+
+封面图放在 `assets/images/bg/` 目录下（WebP 格式），front matter 中写 `/images/bg/文件名.webp`。Hugo 会自动生成 800w/1600w 响应式缩略图。
+
+详见：[IMAGE_WEBP_GUIDE.md](./docs/IMAGE_WEBP_GUIDE.md)
 
 ### 发布
 
@@ -79,8 +86,22 @@ hugo --minify
 ## ⚙️ 核心配置
 
 - **Hugo 配置**：`hugo.yaml` - 站点设置、SEO、评论系统
-- **Nginx**：静态资源缓存、Gzip 压缩
+- **Nginx**：静态资源缓存、Gzip 压缩、stale-while-revalidate
 - **CDN**：Cloudflare 全球加速 - [配置指南](./docs/CLOUDFLARE_DASHBOARD_GUIDE.md)
+
+## ⚡ 性能优化
+
+项目通过 `layouts/partials/` 下的 layout override 实现性能优化（不修改主题文件，升级主题无影响）：
+
+| 优化项       | 文件                            | 说明                                   |
+| ------------ | ------------------------------- | -------------------------------------- |
+| 图片处理管道 | `helper/image.html`             | 封面图自动生成 800w/1600w srcset       |
+| 资源预连接   | `head/custom.html`              | dns-prefetch + preconnect (Giscus, GA) |
+| CSS 预加载   | `head/style.html`               | 主样式 preload 加速 FCP                |
+| 头像预加载   | `head/custom.html`              | 首页 LCP 优化                          |
+| 评论懒加载   | `comments/provider/giscus.html` | IntersectionObserver 延迟加载          |
+
+图片统一存放在 `assets/images/bg/`（WebP 格式），Hugo 构建时自动裁切生成响应式尺寸。
 
 ## 🎨 主题
 
