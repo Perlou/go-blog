@@ -55,7 +55,7 @@ tags = ['Hugo', 'Blog']
 ./publish.sh
 ```
 
-详见：[PUBLISH_WORKFLOW.md](PUBLISH_WORKFLOW.md)
+详见：[PUBLISH_WORKFLOW.md](./docs/PUBLISH_WORKFLOW.md)
 
 ## 📦 部署
 
@@ -74,13 +74,13 @@ docker-compose up -d
 hugo --minify
 ```
 
-配置指南：[DEPLOYMENT.md](DEPLOYMENT.md)
+配置指南：[DEPLOYMENT.md](./docs/DEPLOYMENT.md)
 
 ## ⚙️ 核心配置
 
 - **Hugo 配置**：`hugo.yaml` - 站点设置、SEO、评论系统
 - **Nginx**：静态资源缓存、Gzip 压缩
-- **CDN**：Cloudflare 全球加速 - [配置指南](CLOUDFLARE_DASHBOARD_GUIDE.md)
+- **CDN**：Cloudflare 全球加速 - [配置指南](./docs/CLOUDFLARE_DASHBOARD_GUIDE.md)
 
 ## 🎨 主题
 
@@ -88,10 +88,10 @@ hugo --minify
 
 ## 📚 文档
 
-- [DEPLOYMENT.md](DEPLOYMENT.md) - 服务器部署指南
-- [CLOUDFLARE_DASHBOARD_GUIDE.md](CLOUDFLARE_DASHBOARD_GUIDE.md) - Cloudflare 配置
-- [GISCUS_SETUP_GUIDE.md](GISCUS_SETUP_GUIDE.md) - 评论系统配置
-- [PUBLISH_WORKFLOW.md](PUBLISH_WORKFLOW.md) - 发布工作流
+- [DEPLOYMENT.md](./docs/DEPLOYMENT.md) - 服务器部署指南
+- [CLOUDFLARE_DASHBOARD_GUIDE.md](./docs/CLOUDFLARE_DASHBOARD_GUIDE.md) - Cloudflare 配置
+- [GISCUS_SETUP_GUIDE.md](./docs/GISCUS_SETUP_GUIDE.md) - 评论系统配置
+- [PUBLISH_WORKFLOW.md](./docs/PUBLISH_WORKFLOW.md) - 发布工作流
 
 ## 🛠️ 技术栈
 
