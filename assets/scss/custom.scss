@@ -1,6 +1,5 @@
 /* 自定义字体加载 */
-/* 只加载 Fira Code，其他使用系统字体 */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+/* 使用本地字体与系统字体栈，避免首屏依赖外部字体请求 */
 
 /* 应用自定义字体 */
 :root {

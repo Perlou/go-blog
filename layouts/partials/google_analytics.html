@@ -1,0 +1,40 @@
+{{- with .Site.Config.Services.GoogleAnalytics.ID -}}
+<script>
+    (function () {
+        var gaID = "{{ . }}";
+        if (!gaID) return;
+
+        var dnt = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+        var doNotTrack = dnt === "1" || dnt === "yes";
+        if (doNotTrack) return;
+
+        var injected = false;
+        function injectGA() {
+            if (injected) return;
+            injected = true;
+
+            var script = document.createElement("script");
+            script.async = true;
+            script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(gaID);
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                window.dataLayer.push(arguments);
+            }
+            window.gtag = gtag;
+            gtag("js", new Date());
+            gtag("config", gaID);
+        }
+
+        if ("requestIdleCallback" in window) {
+            requestIdleCallback(injectGA, { timeout: 3500 });
+            return;
+        }
+
+        window.addEventListener("load", function () {
+            setTimeout(injectGA, 1200);
+        }, { once: true });
+    })();
+</script>
+{{- end -}}

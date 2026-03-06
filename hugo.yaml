@@ -76,7 +76,7 @@ params:
     name: Perlou
     email: perloukevin@gmail.com
   images:
-    - https://avatars.githubusercontent.com/u/12897436?v=4
+    - /img/avatar.jpg
 
   footer:
     since: 2020
@@ -91,8 +91,8 @@ params:
     subtitle: slow is fast
     avatar:
       enabled: true
-      local: false
-      src: https://avatars.githubusercontent.com/u/12897436?v=4
+      local: true
+      src: img/avatar.jpg
 
   article:
     math: false
@@ -171,8 +171,8 @@ params:
   defaultImage:
     opengraph:
       enabled: true
-      local: false
-      src: https://avatars.githubusercontent.com/u/12897436?v=4
+      local: true
+      src: img/avatar.jpg
 
   colorScheme:
     # Display toggle
