@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  hugo-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.152.2"
+          extended: true
+
+      - name: Build site
+        run: hugo --minify --gc

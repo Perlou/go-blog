@@ -1,5 +1,11 @@
+{{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+{{- $notHidden := where .Site.RegularPages "Params.hidden" "!=" true -}}
+{{- $filtered := ($pages | intersect $notHidden) -}}
+
 {{- $.Scratch.Add "index" slice -}}
-{{- range .Site.RegularPages -}}
-    {{- $.Scratch.Add "index" (dict "title" .Title "permalink" .Permalink "summary" .Summary "content" .Plain "date" .Date "categories" .Params.categories "tags" .Params.tags) -}}
+{{- range $filtered -}}
+    {{- $summary := .Summary | plainify | truncate 240 -}}
+    {{- $content := .Plain | truncate 2000 -}}
+    {{- $.Scratch.Add "index" (dict "title" .Title "permalink" .Permalink "summary" $summary "content" $content "date" .Date "categories" .Params.categories "tags" .Params.tags) -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

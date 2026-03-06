@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "layouts/**/*.json": "gotmpl",
+    "themes/**/layouts/**/*.json": "gotmpl"
+  }
+}
