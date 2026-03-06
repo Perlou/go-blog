@@ -6,7 +6,7 @@ echo ""
 
 DOMAIN="perlou.top"
 TEST_URLS=(
-    "https://${DOMAIN}/images/covers/langchain.jpg"
+    "https://${DOMAIN}/images/bg/langchain.webp"
     "https://${DOMAIN}/index.html"
 )
 
