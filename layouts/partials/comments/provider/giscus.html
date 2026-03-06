@@ -1,0 +1,67 @@
+{{- with .Site.Params.comments.giscus -}}
+<div id="giscus-container"></div>
+<script>
+  (function () {
+    var container = document.getElementById("giscus-container");
+    if (!container) return;
+
+    var loaded = false;
+    function loadGiscus() {
+      if (loaded) return;
+      loaded = true;
+
+      var script = document.createElement("script");
+      script.src = "https://giscus.app/client.js";
+      script.setAttribute("data-repo", "{{ .repo }}");
+      script.setAttribute("data-repo-id", "{{ .repoID }}");
+      script.setAttribute("data-category", "{{ .category }}");
+      script.setAttribute("data-category-id", "{{ .categoryID }}");
+      script.setAttribute("data-mapping", "{{ .mapping }}");
+      script.setAttribute("data-reactions-enabled", "{{ .reactionsEnabled }}");
+      script.setAttribute("data-emit-metadata", "{{ .emitMetadata }}");
+      script.setAttribute("data-input-position", "{{ .inputPosition }}");
+      script.setAttribute("data-lang", "{{ .lang }}");
+      script.setAttribute("data-theme", "preferred_color_scheme");
+      script.crossOrigin = "anonymous";
+      script.async = true;
+      container.appendChild(script);
+    }
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        if (entries[0].isIntersecting) {
+          loadGiscus();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+
+    observer.observe(container);
+  })();
+</script>
+
+<script>
+  /// Giscus color scheme sync
+  function setGiscusTheme(theme) {
+    let giscus = document.querySelector("iframe.giscus-frame");
+    if (giscus) {
+      giscus.contentWindow.postMessage(
+        {
+          giscus: {
+            setConfig: {
+              theme: theme === "dark" ? "dark_dimmed" : "light",
+            },
+          },
+        },
+        "https://giscus.app",
+      );
+    }
+  }
+
+  /// Listen for theme changes
+  window.addEventListener("onColorSchemeChange", (e) => {
+    setGiscusTheme(e.detail);
+  });
+</script>
+{{- end -}}

@@ -2,7 +2,7 @@
 date = '2026-02-13T22:08:01+08:00'
 draft = false
 title = 'OpenClaw 云服务器部署方案'
-image = '/images/bg/xinjiang-kanas.jpg'
+image = '/images/bg/xinjiang-kanas.webp'
 categories = ['AI', '技术']
 tags = ['AI', 'Agents', 'OpenClaw']
 +++

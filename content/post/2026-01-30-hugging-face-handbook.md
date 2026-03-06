@@ -2,7 +2,7 @@
 date = '2026-01-30T11:53:30+08:00'
 draft = false
 title = 'Hugging Face 速查手册'
-image = '/images/bg/switzerland-alps.jpg'
+image = '/images/bg/switzerland-alps.webp'
 categories = ['AI', '技术']
 tags = ['AI', '深度学习', 'Hugging Face', '大模型']
 +++

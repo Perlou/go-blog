@@ -2,7 +2,7 @@
 date = '2025-12-12T06:00:00+08:00'
 draft = false
 title = 'Pandas手册'
-image = '/images/iceland/blue-lagoon.jpg'
+image = '/images/bg/blue-lagoon.webp'
 categories = ['Python', '技术']
 tags = ['Python', 'Pandas', '数据分析']
 +++

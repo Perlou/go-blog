@@ -1,0 +1,11 @@
+<!-- DNS Prefetch & Preconnect for third-party resources -->
+<link rel="dns-prefetch" href="https://giscus.app" />
+<link rel="preconnect" href="https://giscus.app" crossorigin />
+<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
+<!-- Preload avatar image for LCP optimization (homepage only) -->
+{{ if .IsHome }} {{ $avatar := resources.Get "img/avatar.jpg" }} {{ if $avatar
+}} {{ $resized := $avatar.Resize "150x" }}
+<link rel="preload" href="{{ $resized.RelPermalink }}" as="image" />
+{{ end }} {{ end }}

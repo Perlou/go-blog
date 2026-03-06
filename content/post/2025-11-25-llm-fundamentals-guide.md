@@ -2,7 +2,7 @@
 date = '2025-11-25T03:00:00+08:00'
 draft = false
 title = '大模型入门：原理、架构与实战思考'
-image = '/images/covers/llm-learning.jpg'
+image = '/images/bg/llm-learning.webp'
 categories = ['AI', '技术']
 tags = ['AI', 'RAG', 'Agents', '大模型']
 +++
