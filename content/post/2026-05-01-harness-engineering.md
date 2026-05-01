@@ -216,6 +216,7 @@ Harness Engineering 建立在三条互相支撑的主张上。理解这三条，
 └── Slack 里某条 thread 的口头共识    ← 完全没法 review
 ```
 
+
 #### 3.1.2 Harness 的做法：上移到仓库
 
 把上述所有事实**显式化、文件化、git 可追踪化**：
