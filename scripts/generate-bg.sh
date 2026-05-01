@@ -26,12 +26,21 @@
 set -euo pipefail
 
 # ---------- 自动加载仓库根目录的 .env ----------
+# 只把 .env 里的变量当作"未设置时的默认值"——命令行直接传的环境变量
+# 优先级更高，避免临时 export 被 .env 覆盖。
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
 if [ -f "$REPO/.env" ]; then
-  set -a
-  # shellcheck disable=SC1091
-  source "$REPO/.env"
-  set +a
+  while IFS='=' read -r _k _v; do
+    [[ "$_k" =~ ^[[:space:]]*# ]] && continue
+    [[ -z "${_k// }" ]] && continue
+    _k="${_k// }"           # 去 key 两侧空格
+    # 去 value 两侧的成对引号
+    _v="${_v%\"}"; _v="${_v#\"}"; _v="${_v%\'}"; _v="${_v#\'}"
+    if [ -z "${!_k:-}" ]; then
+      export "$_k=$_v"
+    fi
+  done < "$REPO/.env"
+  unset _k _v
 fi
 
 NAME="${1:?用法: $0 <name-without-extension> <prompt>}"

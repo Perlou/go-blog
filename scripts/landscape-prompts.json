@@ -12,6 +12,62 @@
     "prompt": "Hemu Village in autumn, Kanas region, Xinjiang, China. Traditional Tuvan log cabins scattered across a meadow, surrounded by birch and larch trees in vivid autumn yellow and orange, distant snow-dusted mountains, sun rays piercing morning mist over the valley, photorealistic, fairy-tale atmosphere"
   },
   {
+    "name": "xinjiang-sayram",
+    "prompt": "Sayram Lake at sunset, northern Xinjiang, China. The largest alpine lake in Xinjiang surrounded by rolling green meadows and snow-capped Tianshan peaks, brilliant lupine and wildflowers blooming on the shore, layered pink and purple sky reflecting on still water, photorealistic, no people"
+  },
+  {
+    "name": "xinjiang-bayinbuluk",
+    "prompt": "Bayinbuluk Grasslands at Swan Lake, Xinjiang, China. Winding meandering river creating nine bends across vast green steppe, hundreds of swans on the water, distant snow-capped Tianshan peaks at sunset glowing pink-orange, photorealistic, dramatic perspective, no people"
+  },
+  {
+    "name": "xinjiang-yili-nalati",
+    "prompt": "Nalati Grasslands in summer, Yili, Xinjiang, China. Endless rolling green meadows dotted with wildflowers, herds of horses galloping across, distant snow-capped Tianshan peaks, traditional Kazakh yurt with smoke rising, golden afternoon light, photorealistic, expansive landscape"
+  },
+  {
+    "name": "xinjiang-rainbow-hills",
+    "prompt": "Wucai Tan rainbow-colored hills near Burqin, Xinjiang, China. Dramatic eroded mudstone hills striped in vivid red, orange, yellow, and white horizontal layers, deep blue Irtysh River winding through the colorful badlands at sunset, photorealistic, otherworldly geology, no people"
+  },
+  {
+    "name": "sichuan-jiuzhaigou",
+    "prompt": "Jiuzhaigou Valley in autumn, Sichuan, China. Layered series of brilliant turquoise and emerald terraced pools cascading down forested mountainside, vivid red and gold maple foliage surrounding the water, photorealistic, soft autumn light, fairy-tale atmosphere, no people"
+  },
+  {
+    "name": "sichuan-daocheng-yading",
+    "prompt": "Daocheng Yading Nature Reserve, western Sichuan, China. Three sacred snow-capped peaks (Chenresig, Jampelyang, Chana Dorje) reflected in the milky-white Pearl Lake, golden alpine larches in autumn, prayer flags fluttering, photorealistic, sacred Tibetan Buddhist landscape, no people"
+  },
+  {
+    "name": "sichuan-mount-siguniang",
+    "prompt": "Mount Siguniang (Four Sisters Mountain), Sichuan, China. Four pyramid-shaped snow-capped peaks rising sharply above an alpine meadow, the tallest reaching 6,250 meters, foreground filled with grazing yaks and patches of late summer wildflowers, photorealistic, golden afternoon light, no people"
+  },
+  {
+    "name": "sichuan-huanglong",
+    "prompt": "Huanglong scenic area, Sichuan, China. Cascading travertine pools tinted vivid turquoise, gold, and emerald, terraced down a forested mountain valley, snow-capped Min Shan peaks in distance, mossy banks, photorealistic, fairy-tale atmosphere, no people"
+  },
+  {
+    "name": "tibet-yamdrok",
+    "prompt": "Yamdrok Lake (Yamdrok Tso), Tibet. Sacred turquoise high-altitude lake at 4,400 meters with snow-capped Himalayan peaks in the distance, colorful Tibetan prayer flags fluttering in the foreground on a hilltop, yak silhouettes on the shoreline, photorealistic, vast spiritual landscape, golden afternoon light"
+  },
+  {
+    "name": "tibet-namtso",
+    "prompt": "Namtso Lake at dawn, Tibet. Vast deep-blue holy lake at 4,718 meters with the Nyenchen Tanglha mountain range capped in snow, prayer stones and colorful Tibetan flags in the foreground, soft pink alpenglow on the peaks, calm reflective water, photorealistic, no people"
+  },
+  {
+    "name": "tibet-everest-base-camp",
+    "prompt": "Mount Everest north face from Tibetan plateau, Himalayas. Massive snow-covered pyramid summit catching first light at sunrise glowing fiery orange, prayer flags and stone cairns in foreground, dark blue pre-dawn sky transitioning to pink, photorealistic, dramatic alpenglow, no people"
+  },
+  {
+    "name": "ladakh-pangong",
+    "prompt": "Pangong Tso lake, Ladakh, India. Surreal high-altitude lake at 4,350 meters with water shifting between deep blue and emerald green, jagged barren brown mountains rising from the shore, prayer flags fluttering, perfectly clear sky with cottony clouds, photorealistic, vast and remote, no people"
+  },
+  {
+    "name": "bhutan-tigers-nest",
+    "prompt": "Paro Taktsang (Tiger's Nest Monastery), Bhutan. Whitewashed monastery clinging dramatically to a sheer cliff face 900 meters above the Paro valley, surrounded by lush pine forest and cliffside rock, prayer flags strung across the gorge, soft morning mist drifting through the valley, photorealistic, mystical atmosphere, no people"
+  },
+  {
+    "name": "cambodia-angkor-wat",
+    "prompt": "Angkor Wat at sunrise, Cambodia. Iconic five-tower silhouette of the ancient Khmer temple reflected in a foreground lotus pond, fiery orange and pink sky behind, jungle canopy framing the scene, photorealistic, cinematic light, no people"
+  },
+  {
     "name": "norway-geirangerfjord",
     "prompt": "Aerial view of Geirangerfjord, Norway, UNESCO World Heritage site. Deep emerald-blue fjord winding between vertical cliffs, the Seven Sisters waterfall cascading down the rock face, small village at the head of the fjord, soft morning mist hovering above water, photorealistic, dramatic perspective"
   },
@@ -20,8 +76,136 @@
     "prompt": "Reine village, Lofoten Islands, Norway. Iconic red rorbu fishing cabins on stilts above mirror-still water, dramatic granite peaks (Reinebringen) rising directly from the sea, midnight sun glowing soft pink-orange, photorealistic, calm summer night, no people"
   },
   {
+    "name": "sweden-abisko-aurora",
+    "prompt": "Aurora borealis above Abisko National Park, Swedish Lapland. Vivid green and purple northern lights swirling across a starry sky, snow-covered birch forest below, frozen Torneträsk lake reflecting the aurora, photorealistic, long exposure, deep arctic winter, no people"
+  },
+  {
+    "name": "finland-lapland-cabin",
+    "prompt": "Glass igloo cabins in Finnish Lapland under the northern lights. Dome-roofed transparent cabins glowing warmly from inside, surrounded by deep snow and snow-laden pine forest, brilliant green aurora swaying overhead in starry sky, photorealistic, magical winter night, no people"
+  },
+  {
+    "name": "iceland-kirkjufell",
+    "prompt": "Kirkjufell mountain, Snæfellsnes Peninsula, Iceland. Iconic conical peak rising from the sea, the small Kirkjufellsfoss waterfall cascading in the foreground, vibrant green northern lights swirling across a starry winter sky, photorealistic, long exposure aurora, no people"
+  },
+  {
+    "name": "iceland-jokulsarlon",
+    "prompt": "Jökulsárlón glacier lagoon at sunset, southeast Iceland. Massive blue and white icebergs floating in calm lagoon water, reflecting fiery pink and orange sky, the Vatnajökull glacier tongue in the distance, photorealistic, magic hour light, no people"
+  },
+  {
+    "name": "iceland-vestrahorn",
+    "prompt": "Vestrahorn (Stokksnes) mountain at low tide, southeast Iceland. Dramatic black sand beach with patterns of dark dunes covered in tufts of beach grass, jagged Vestrahorn mountain reflecting in shallow tidal water, dramatic stormy sky with shafts of sunlight, photorealistic, moody, no people"
+  },
+  {
+    "name": "iceland-skogafoss",
+    "prompt": "Skógafoss waterfall, southern Iceland. Massive 60-meter rectangular waterfall with vibrant double rainbow in the rising mist, lush green meadow leading up to the falls, basalt cliffs, photorealistic, soft golden hour light, summer, no people"
+  },
+  {
+    "name": "faroe-islands-mulafossur",
+    "prompt": "Múlafossur Waterfall, Vágar Island, Faroe Islands. Slim ribbon of waterfall tumbling off a green cliff edge directly into the North Atlantic ocean, traditional turf-roofed cottages of Gásadalur village in the foreground, dramatic sea cliffs, low rolling fog, photorealistic, moody overcast light"
+  },
+  {
+    "name": "greenland-ilulissat",
+    "prompt": "Ilulissat Icefjord, western Greenland, UNESCO World Heritage site. Massive electric-blue icebergs floating in arctic fjord, midnight sun casting golden light, distant traditional Inuit village of Ilulissat, photorealistic, vast scale, no people"
+  },
+  {
+    "name": "scotland-isle-of-skye",
+    "prompt": "The Quiraing landslip on the Isle of Skye, Scotland. Dramatic green ridges, jagged pinnacles, and sweeping hillsides plunging toward the sea, low clouds drifting through the formations, single winding mountain road visible, soft moody light with shafts of sunlight breaking through, photorealistic, no people"
+  },
+  {
+    "name": "ireland-cliffs-of-moher",
+    "prompt": "Cliffs of Moher at sunset, County Clare, Ireland. Sheer 200-meter sea cliffs plunging vertically into the wild Atlantic ocean, lush green grass on the cliff tops, O'Brien's Tower silhouette, fiery orange sky, photorealistic, dramatic windswept atmosphere, no people"
+  },
+  {
+    "name": "switzerland-alps",
+    "prompt": "Swiss Alps in summer. Vast green alpine meadow with grazing cows wearing bells, snow-capped Eiger and Jungfrau peaks rising in the background, traditional wooden chalets with red geraniums, perfect blue sky, photorealistic, classic Switzerland postcard scene"
+  },
+  {
+    "name": "switzerland-lauterbrunnen",
+    "prompt": "Lauterbrunnen Valley, Switzerland. Deep U-shaped glacial valley with sheer 300-meter limestone cliffs on both sides, the iconic Staubbach Falls cascading down the cliff face, traditional alpine village with church tower, lush meadows, snow-capped peaks in distance, photorealistic, fairy-tale atmosphere, no people"
+  },
+  {
+    "name": "slovenia-lake-bled",
+    "prompt": "Lake Bled, Slovenia. Tiny island in the middle of an emerald-green alpine lake hosting a charming pilgrimage church with red roof, Bled Castle perched on a cliff in the background, surrounded by Julian Alps, soft morning mist over the water, photorealistic, fairy-tale atmosphere, no people"
+  },
+  {
+    "name": "plitvice-croatia",
+    "prompt": "Plitvice Lakes National Park, Croatia. Cascading turquoise lakes flowing into each other through dozens of small waterfalls, lush green forest surrounding the wooden boardwalks, photorealistic, soft summer afternoon light, vivid water colors, no people"
+  },
+  {
+    "name": "italy-dolomites-tre-cime",
+    "prompt": "Tre Cime di Lavaredo (Three Peaks of Lavaredo), Dolomites, Italy. Three iconic vertical limestone peaks at sunset glowing fiery orange-red against deep blue twilight sky, alpine meadow with wildflowers in foreground, photorealistic, dramatic alpenglow, no people"
+  },
+  {
+    "name": "italy-cinque-terre",
+    "prompt": "Cinque Terre coastline, Liguria, Italy. Colorful pastel-colored houses (yellow, pink, orange) clinging to terraced cliffs above the Mediterranean Sea, vineyards stepping down to crystal-blue water, fishing boats in the harbor, photorealistic, warm Mediterranean light, no people"
+  },
+  {
+    "name": "france-verdon-gorge",
+    "prompt": "Gorges du Verdon, Provence, France. Deep limestone canyon with vivid turquoise river winding through, sheer 700-meter cliffs, lavender fields and Mediterranean scrub on the rims, photorealistic, midday sun lighting the gorge from above, no people"
+  },
+  {
+    "name": "france-mont-saint-michel",
+    "prompt": "Mont Saint-Michel at high tide, Normandy, France. Iconic medieval abbey island silhouetted against soft pink and lavender sunset sky, surrounded by reflective tidal flats, the spire of the abbey rising above stone walls, photorealistic, dreamy atmosphere, no people"
+  },
+  {
+    "name": "spain-ronda",
+    "prompt": "Ronda, Andalusia, Spain. Whitewashed Pueblo Blanco perched dramatically on a 100-meter cliff edge, the iconic Puente Nuevo stone bridge spanning the deep El Tajo gorge, golden Spanish countryside stretching to the horizon, photorealistic, warm sunset light, no people"
+  },
+  {
+    "name": "turkey-cappadocia",
+    "prompt": "Cappadocia at sunrise, central Turkey. Dozens of colorful hot air balloons floating above the surreal landscape of fairy chimney rock formations and ancient cave dwellings, soft pink and orange sunrise glow, photorealistic, magical atmosphere"
+  },
+  {
     "name": "patagonia-torres-del-paine",
     "prompt": "Torres del Paine national park, Patagonia, Chile. The three iconic granite towers glowing fiery orange at sunrise, turquoise glacial lake (Lago Pehoe) in foreground, scattered guanacos grazing on the steppe, low clouds drifting around the peaks, photorealistic, dramatic alpenglow, no people"
+  },
+  {
+    "name": "patagonia-fitz-roy",
+    "prompt": "Mount Fitz Roy at sunrise, Argentine Patagonia. Jagged granite spires of Fitz Roy and Cerro Torre glowing fiery red in alpenglow, foreground filled with golden lenga forest in autumn, glacial Laguna de los Tres reflecting the peaks, photorealistic, dramatic, no people"
+  },
+  {
+    "name": "bolivia-uyuni",
+    "prompt": "Salar de Uyuni salt flats during the wet season, Bolivia. World's largest mirror with perfect reflection of clouds and pink-orange sunset sky, endless flat horizon, infinite symmetry, photorealistic, surreal otherworldly atmosphere, no people"
+  },
+  {
+    "name": "morocco-sahara",
+    "prompt": "Erg Chebbi sand dunes at sunrise, Sahara Desert, Morocco. Towering 150-meter orange-red dunes with sharp wind-sculpted ridges, deep purple shadows in the valleys between, soft pink horizon glow, single line of camel tracks, photorealistic, vast and minimal, no people"
+  },
+  {
+    "name": "namibia-deadvlei",
+    "prompt": "Deadvlei white clay pan, Namib-Naukluft National Park, Namibia. Skeleton silhouettes of 900-year-old dead camel-thorn trees standing on cracked pure-white clay floor, surrounded by towering rust-red sand dunes, deep blue sky, photorealistic, surreal and graphic, no people"
+  },
+  {
+    "name": "tanzania-kilimanjaro",
+    "prompt": "Mount Kilimanjaro at sunrise, Tanzania. Massive snow-capped volcanic summit rising above the African plains, foreground featuring a lone acacia tree and herds of elephants and zebras grazing on the savanna, golden morning light, photorealistic, iconic African landscape"
+  },
+  {
+    "name": "kenya-maasai-mara",
+    "prompt": "Maasai Mara at sunset, Kenya. Vast golden African savanna grassland, herds of wildebeest and zebras during the great migration, lone acacia tree silhouetted against fiery orange and red sky, distant escarpment, photorealistic, classic safari scene"
+  },
+  {
+    "name": "madagascar-baobab-avenue",
+    "prompt": "Avenue of the Baobabs, Morondava, Madagascar. Row of massive ancient Adansonia grandidieri baobab trees with fat trunks and umbrella-like crowns, dirt road running between them, dramatic pink and purple sunset sky, photorealistic, iconic Madagascar landscape, no people"
+  },
+  {
+    "name": "south-africa-table-mountain",
+    "prompt": "Table Mountain at sunset, Cape Town, South Africa. Iconic flat-topped sandstone mountain dominating the skyline above the city and the deep blue Atlantic Ocean, signature 'tablecloth' cloud rolling over the summit, golden hour glow on the cliffs, photorealistic, dramatic"
+  },
+  {
+    "name": "botswana-okavango-delta",
+    "prompt": "Okavango Delta from above, Botswana. Aerial view of an emerald-green inland river delta with winding turquoise channels and lily-covered lagoons, herds of elephants and zebras moving through papyrus swamps, photorealistic, golden hour, vast wilderness, no people"
+  },
+  {
+    "name": "australia-uluru",
+    "prompt": "Uluru (Ayers Rock) at sunset, Northern Territory, Australia. Massive sacred sandstone monolith glowing fiery red-orange against a deep purple twilight sky, surrounded by red desert plains dotted with spinifex grass, photorealistic, iconic Australian outback, no people"
+  },
+  {
+    "name": "australia-twelve-apostles",
+    "prompt": "Twelve Apostles at sunrise, Great Ocean Road, Victoria, Australia. Towering limestone sea stacks rising from the wild Southern Ocean, golden cliffs glowing in early morning light, dramatic crashing waves, photorealistic, sweeping coastal vista, no people"
+  },
+  {
+    "name": "australia-whitehaven-beach",
+    "prompt": "Whitehaven Beach aerial view, Whitsunday Islands, Australia. Pure white silica sand swirling into electric turquoise water in mesmerizing patterns, framed by lush green tropical vegetation, brilliant blue sky, photorealistic, paradise tropical scene, no people"
   },
   {
     "name": "mount-cook-tekapo",
@@ -32,19 +216,47 @@
     "prompt": "Milford Sound at sunrise, Fiordland, New Zealand. Mitre Peak rising 1,683 meters straight from the dark fjord water, layers of mist clinging to vertical rainforest cliffs, calm reflection on the water, photorealistic, moody atmosphere, ethereal light, no people"
   },
   {
-    "name": "faroe-islands-mulafossur",
-    "prompt": "Múlafossur Waterfall, Vágar Island, Faroe Islands. Slim ribbon of waterfall tumbling off a green cliff edge directly into the North Atlantic ocean, traditional turf-roofed cottages of Gásadalur village in the foreground, dramatic sea cliffs, low rolling fog, photorealistic, moody overcast light"
+    "name": "nz-wanaka-tree",
+    "prompt": "The lone Wanaka willow tree standing in Lake Wanaka, Otago, New Zealand. Bare leafless tree silhouetted in shallow turquoise water, towering snow-capped Southern Alps in background, soft pastel pink and lavender sunrise sky, perfectly still water with mirror reflection, photorealistic, ethereal, no people"
   },
   {
-    "name": "tibet-yamdrok",
-    "prompt": "Yamdrok Lake (Yamdrok Tso), Tibet. Sacred turquoise high-altitude lake at 4,400 meters with snow-capped Himalayan peaks in the distance, colorful Tibetan prayer flags fluttering in the foreground on a hilltop, yak silhouettes on the shoreline, photorealistic, vast spiritual landscape, golden afternoon light"
-  },
-  {
-    "name": "iceland-skogafoss",
-    "prompt": "Skógafoss waterfall, southern Iceland. Massive 60-meter rectangular waterfall with vibrant double rainbow in the rising mist, lush green meadow leading up to the falls, basalt cliffs, photorealistic, soft golden hour light, summer, no people"
+    "name": "nz-mount-aspiring",
+    "prompt": "Mount Aspiring (Tititea), Otago, New Zealand. Sharp snow-capped pyramid summit rising 3,033 meters above remote alpine valley, glacier-fed turquoise river winding through golden tussock grassland, photorealistic, summer afternoon, dramatic light, no people"
   },
   {
     "name": "canadian-rockies-moraine",
     "prompt": "Moraine Lake at sunrise, Banff National Park, Canadian Rockies. Vivid turquoise glacial lake reflecting the Valley of the Ten Peaks, glowing alpenglow on the snowy summits, dense alpine pine forest hugging the shore, smooth glassy water, photorealistic, no people"
+  },
+  {
+    "name": "canada-lake-louise",
+    "prompt": "Lake Louise in autumn, Banff National Park, Canada. Iconic emerald-green glacial lake with the historic Fairmont Chateau hotel on the far shore, towering Victoria Glacier in the background, golden larch trees on surrounding slopes, photorealistic, perfectly calm water with mirror reflection, no people"
+  },
+  {
+    "name": "usa-yosemite-half-dome",
+    "prompt": "Yosemite Valley with Half Dome, California, USA. View from Tunnel View showing El Capitan on left, Bridalveil Fall on right, and Half Dome rising in the distance at the head of the valley, lush autumn forest in foreground, soft afternoon light, photorealistic, iconic American landscape, no people"
+  },
+  {
+    "name": "usa-monument-valley",
+    "prompt": "Monument Valley at sunrise, Arizona-Utah border, USA. Massive red sandstone buttes rising from the flat desert floor, casting long purple shadows, fiery orange sky, lone winding dirt road in foreground, photorealistic, classic American Southwest, no people"
+  },
+  {
+    "name": "usa-grand-teton",
+    "prompt": "Grand Teton range reflected in Schwabacher Landing, Wyoming, USA. Jagged snow-capped Teton peaks mirrored in calm beaver pond at sunrise, foreground dotted with autumn willows in vivid yellow and red, soft pastel sunrise sky, photorealistic, no people"
+  },
+  {
+    "name": "usa-antelope-canyon",
+    "prompt": "Upper Antelope Canyon, Arizona, USA. Smooth wave-like sandstone walls glowing in vivid orange and red, single shaft of sunlight beaming down through narrow opening above, fine sand particles suspended in the light beam, photorealistic, surreal cathedral-like atmosphere, no people"
+  },
+  {
+    "name": "usa-crater-lake",
+    "prompt": "Crater Lake at sunrise, Oregon, USA. Deepest lake in the United States with surreal cobalt-blue water filling a volcanic caldera, Wizard Island visible in the lake, snow on the rim cliffs, soft pink alpenglow, photorealistic, calm water, no people"
+  },
+  {
+    "name": "alaska-denali",
+    "prompt": "Denali (Mount McKinley) at midnight sun, Alaska, USA. Massive snow-capped 6,190-meter summit reflected in Wonder Lake, foreground filled with autumn tundra in red and gold, low golden Arctic light, photorealistic, vast wilderness, no people"
+  },
+  {
+    "name": "kamchatka-volcano",
+    "prompt": "Klyuchevskaya Sopka active volcano, Kamchatka Peninsula, Russia. Massive symmetrical snow-capped volcanic cone with steam plume rising from summit, vast tundra and lava fields in foreground, dramatic dawn light with deep blue sky, photorealistic, raw wilderness, no people"
   }
 ]

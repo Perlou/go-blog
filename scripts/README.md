@@ -5,8 +5,8 @@
 | 脚本 | 用途 |
 |---|---|
 | `generate-bg.sh` | 调 Google AI Studio Images API 生成单张博客封面图 → WebP → `assets/images/bg/` |
-| `generate-bg-batch.sh` | 批量跑 `landscape-prompts.json` 里的所有图 |
-| `landscape-prompts.json` | 12 张精选风景图的提示词 manifest |
+| `generate-bg-batch.sh` | 批量跑 manifest 里的图，支持随机抽 N 张 |
+| `landscape-prompts.json` | **65 张精选风景图**的提示词 manifest，覆盖：<br>· 中国：新疆 (7) / 西藏 (3) / 四川 (4)<br>· 北欧：冰岛 (4) / 挪威 (2) / 瑞典 / 芬兰 / 法罗 / 格陵兰<br>· 西欧：苏格兰 / 爱尔兰 / 瑞士 (2) / 斯洛文尼亚 / 克罗地亚 / 意大利 (2) / 法国 (2) / 西班牙 / 土耳其<br>· 北美：美国 (5) / 加拿大 (2) / 阿拉斯加<br>· 南美：巴塔哥尼亚 (2) / 玻利维亚<br>· 非洲：摩洛哥 / 纳米比亚 / 坦桑尼亚 / 肯尼亚 / 马达加斯加 / 南非 / 博茨瓦纳<br>· 大洋洲：澳大利亚 (3) / 新西兰 (3)<br>· 其它：拉达克 / 不丹 / 柬埔寨 / 堪察加 |
 | `test-cdn.sh` | 现有的 CDN 测试脚本（独立用途） |
 
 默认模型：**[Nano Banana Pro](https://blog.google/innovation-and-ai/products/nano-banana-pro/)**（`gemini-3-pro-image-preview`）。
@@ -34,25 +34,46 @@ cp .env.example .env
 
 ---
 
-## 批量生成（最常见）
+## 批量生成
+
+### 全部跑（节省费用：自动跳过已生成的）
 
 ```bash
 ./scripts/generate-bg-batch.sh
 ```
 
+manifest 共 65 条；脚本会过滤掉 `assets/images/bg/` 里已存在的同名 webp，
+只跑剩下的。重复执行直到全部存在为止。
+
+### 🎲 随机抽 N 张（最常用）
+
+```bash
+./scripts/generate-bg-batch.sh -n 1     # 随机一张（"给我加一张图就行"）
+./scripts/generate-bg-batch.sh -n 5     # 随机 5 张
+./scripts/generate-bg-batch.sh -n 100   # 超出未生成数量会自动收敛
+```
+
 行为：
-- 读取 `scripts/landscape-prompts.json`，逐张调 Google AI Studio API
-- 默认模型 **Nano Banana Pro**（`gemini-3-pro-image-preview`），1:1 比例
-- 已存在的 webp **自动跳过**（节省费用）；想强制覆盖加 `FORCE=1`
-- 单张失败不打断后续，结尾汇总 OK / 跳过 / 失败计数
+- 默认从 manifest 里**未生成**的池子里随机抽（已存在的不会被重复抽中）
+- `FORCE=1` 时把已存在的也放回池子里（用来重新生成）
+- 单张失败不打断后续
+
+### 用其它 manifest
+
+```bash
+./scripts/generate-bg-batch.sh -n 3 path/to/other-prompts.json
+./scripts/generate-bg-batch.sh path/to/other-prompts.json    # 全部跑
+```
 
 ---
 
-## 跑单张
+## 跑单张（指定名字 + 提示词）
 
 ```bash
 ./scripts/generate-bg.sh tibet-yamdrok "Yamdrok sacred lake at sunrise..."
 ```
+
+适合"我想要某个具体地方的图，写好了 prompt"。日常补图随机模式更方便。
 
 ---
 
@@ -137,4 +158,5 @@ photorealistic, no people
 | Nano Banana 2 (`gemini-3.1-flash-image-preview`) | 更便宜的 flash 计价 |
 | Imagen 4 / 3 | 单张定价 ~$0.04 |
 
-跑完 12 张默认 manifest 大约 **$1 以内**。具体配额以 [Google AI Studio](https://aistudio.google.com) 当前显示为准。
+跑完 65 张完整 manifest 大约 **$3–10**（按 Nano Banana Pro 输出 token 估算；
+随机抽 5 张约 $0.25–0.75）。具体配额以 [Google AI Studio](https://aistudio.google.com) 当前显示为准。
