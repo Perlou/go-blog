@@ -1,402 +1,205 @@
-# Perlou's Blog 项目规则
+# Perlou's Blog · 项目规则
 
-## 项目概述
+> 这份文件给 AI 协作者作为"快速对齐"用。完整的边界与命令在
+> [`CLAUDE.md`](../CLAUDE.md)；写作风格规范在
+> [`blog-writing-prompt-template.md`](./blog-writing-prompt-template.md)；
+> 可被加载的 skill 在 [`skills/`](../skills/)。
+>
+> **本文件只放"项目特定的事实与决策"**，不重复其它文档已有内容。
 
-这是一个基于 Hugo 静态网站生成器构建的个人技术博客项目，使用 Hugo Theme Stack 主题，主要分享前端、全栈开发和 AI 应用相关的技术内容。
+---
 
-- **博客地址**: https://perlou.top
-- **仓库**: Perlou/go-blog
-- **作者**: Perlou ([@Perlou](https://github.com/Perlou))
-- **语言**: 简体中文 (zh-cn)
-- **座右铭**: slow is fast
+## 项目定位
 
-## 技术栈
+| 字段 | 值 |
+|---|---|
+| 名字 | Perlou's Blog |
+| 域名 | [perlou.top](https://perlou.top) |
+| 仓库 | [Perlou/go-blog](https://github.com/Perlou/go-blog) |
+| 作者 | Perlou ([@Perlou](https://github.com/Perlou)) |
+| 座右铭 | slow is fast |
+| 语言 | 简体中文（zh-cn） |
+| 站点类型 | 个人技术博客 + 偶尔随笔 |
+| 主题选题 | AI 工程实践 / Python & 数据 / 全栈开发 / 工具体验 |
 
-### 核心技术
+---
 
-- **静态站点生成器**: [Hugo](https://gohugo.io/) (v0.152.2+, Extended 版本)
-- **主题**: [Hugo Theme Stack](https://github.com/CaiJimmy/hugo-theme-stack) (通过 Git Submodule 管理)
-- **配置格式**: YAML (`hugo.yaml`)
-- **内容格式**: Markdown + TOML Front Matter
+## 真实选题分布（基于 14 篇已发布文章）
 
-### 部署与运维
-
-- **容器化**: Docker + Docker Compose
-- **Web 服务器**: Nginx (Alpine)
-- **CI/CD**: GitHub Actions (手动触发)
-- **部署方式**: 自动化部署到阿里云服务器
-- **SSL/HTTPS**: 支持 (可选配置 Let's Encrypt)
-
-### 功能特性
-
-- **评论系统**: Giscus (基于 GitHub Discussions)
-- **分析工具**: Google Analytics (G-CTWSKJMNN4)
-- **搜索功能**: 内置 JSON 索引搜索
-- **图片优化**: 响应式图片处理 (多尺寸: 480px, 720px, 1024px, 1440px)
-- **主题模式**: 支持自动/浅色/深色模式切换
-- **SEO 优化**: 完整的 meta 标签、Open Graph、Twitter Cards
-
-## 项目结构
-
-\`\`\`
-/Users/perlou/Desktop/personal/go-blog/
-├── .github/ # GitHub Actions 工作流
-├── archetypes/ # 内容模板（default.md）
-├── assets/ # 静态资源（图片、CSS、JS）
-├── content/ # 博客内容
-│ ├── page/ # 页面（关于、归档、搜索、友链）
-│ └── post/ # 博客文章（按日期命名）
-├── data/ # 数据文件
-├── i18n/ # 国际化翻译
-├── layouts/ # 自定义布局模板
-│ ├── 404.html # 自定义 404 页面
-│ ├── \_default/ # 默认布局
-│ └── partials/ # 部分模板（header、footer、article-list 等）
-├── static/ # 静态文件（favicon.ico、robots.txt、images/）
-├── themes/ # 主题目录
-│ └── hugo-theme-stack/
-├── public/ # 构建输出（不提交到 Git）
-├── resources/ # Hugo 资源缓存
-├── hugo.yaml # Hugo 主配置文件
-├── Dockerfile # Docker 镜像构建
-├── docker-compose.yml # Docker Compose 配置
-├── nginx.conf # Nginx 配置
-├── publish.sh # 发布脚本
-├── README.md # 项目说明
-├── DEPLOYMENT.md # 部署指南
-├── PUBLISH_WORKFLOW.md # 发布工作流
-├── GISCUS_SETUP_GUIDE.md # Giscus 配置指南
-└── CLOUDFLARE_DASHBOARD_GUIDE.md # Cloudflare 配置指南
-\`\`\`
-
-## 编码规范与最佳实践
-
-### 文章创建
-
-1. **文件命名规范**: 使用 `YYYY-MM-DD-article-title.md` 格式
-
-   ```bash
-   # 推荐
-   content/post/2025-11-19-random-thoughts.md
-
-   # 不推荐
-   content/post/random-thoughts.md
-   content/post/2025-random.md
-   ```
-
-2. **创建新文章**:
-
-   ```bash
-   hugo new content/post/YYYY-MM-DD-article-title.md
-   ```
-
-3. **Front Matter 格式**:
-   ```toml
-   +++
-   date = '2025-11-19T13:45:49+08:00'
-   draft = false              # false 表示发布，true 表示草稿
-   title = '文章标题'
-   categories = ['分类']       # 单个或多个分类
-   tags = ['标签1', '标签2']   # 相关标签
-   image = 'cover.jpg'        # 可选：封面图片
-   +++
-   ```
-
-### 配置文件管理
-
-1. **主配置文件**: `hugo.yaml`
-
-   - 站点基本信息（baseurl, title, languageCode）
-   - SEO 配置（description, keywords, author）
-   - 菜单配置（main menu, social links）
-   - 侧边栏组件（widgets）
-   - 评论系统、分析工具等
-
-2. **主题配置**: `themes/hugo-theme-stack/hugo.yaml`
-
-   - 仅包含主题默认配置
-   - **不要直接修改此文件**，所有自定义配置应在根目录 `hugo.yaml` 中覆盖
-
-3. **环境特定配置**:
-   - 本地开发: `baseurl: http://localhost:1313/`
-   - 生产环境: `baseurl: https://perlou.top/`
-   - 使用 Dockerfile 构建时自动指定 baseURL
-
-### 静态资源管理
-
-1. **图片存放位置**:
-
-   - 文章内图片: `static/images/posts/YYYY-MM-DD-article-title/`
-   - 通用图片: `static/images/`
-   - 头像: 使用 GitHub Avatar (`https://avatars.githubusercontent.com/u/12897436?v=4`)
-
-2. **图片优化**:
-
-   - 启用响应式图片处理
-   - 封面图片质量: 85%
-   - 内容图片质量: 80%
-   - 自动生成多尺寸版本
-
-3. **Favicon**:
-   - 位置: `static/favicon.ico`
-   - 配置: `favicon: favicon.ico?v=2` (添加版本号以强制刷新缓存)
-
-### 自定义布局
-
-1. **布局优先级**:
-
-   ```
-   layouts/ (项目自定义) > themes/hugo-theme-stack/layouts/ (主题默认)
-   ```
-
-2. **常见自定义**:
-
-   - `layouts/404.html`: 自定义 404 页面
-   - `layouts/partials/article-list/`: 文章列表布局
-   - `layouts/partials/head/`: 自定义 head 标签
-
-3. **修改建议**:
-   - 先复制主题中的原始文件到 `layouts/` 对应位置
-   - 在副本上进行修改
-   - 保留清晰的注释说明修改原因
-
-### SEO 最佳实践
-
-1. **必须配置的 SEO 字段**:
-
-   - `title`: 页面标题
-   - `description`: 站点描述
-   - `keywords`: 关键词列表
-   - `author.name` & `author.email`
-   - `images`: 用于 Open Graph 的默认图片
-
-2. **文章 SEO**:
-
-   - 每篇文章必须有标题和日期
-   - 使用描述性的分类和标签
-   - 可选：为重要文章添加自定义 `image`
-
-3. **URL 结构**:
-   - 文章: `/p/:slug/` (slug 基于文章标题)
-   - 页面: `/:slug/`
-
-## 工作流程
-
-### 本地开发
-
-1. **启动开发服务器**:
-
-   ```bash
-   hugo server
-   # 访问 http://localhost:1313
-   ```
-
-2. **实时预览**:
-
-   - Hugo 服务器自动监听文件变化
-   - 浏览器自动刷新
-
-3. **查看草稿**:
-   ```bash
-   hugo server -D
-   ```
-
-### 发布流程
-
-#### 推荐方式：使用 publish.sh
-
-```bash
-# 1. 编辑内容
-vim content/post/2025-11-20-new-post.md
-
-# 2. 运行发布脚本
-./publish.sh
-
-# 3. 输入提交信息
-# 格式: <type>: <description>
-# 例如: post: 发布新文章《标题》
+```
+AI / Agents / LLM / RAG          ~60%
+Python / 数据 / 深度学习          ~20%
+项目分享 / 工具实践                ~15%
+随笔 / 投资观察                   ~5%
 ```
 
-**publish.sh 功能**:
+不太涉及：纯前端 UI 教程、设计、生活类。AI 协作时遵循同分布，避免给出
+跑偏的写作建议。
 
-1. 检查并显示所有文件改动
-2. 提示输入提交信息
-3. 提交并推送代码到 GitHub
-4. 自动触发 GitHub Actions 部署（需要安装 `gh` CLI）
+---
 
-#### 提交信息规范
+## 真实分类与标签池（按实际频率）
 
-- `post: 发布新文章《标题》`
-- `draft: 正在写文章...`
-- `feat: 添加新功能`
-- `fix: 修复 Bug`
-- `style: 样式调整`
-- `docs: 更新文档`
-- `config: 配置修改`
+### categories（**只用这几种组合**）
 
-### 部署流程
+| 组合 | 频次 | 适用 |
+|---|---|---|
+| `['AI', '技术']` | 最常用 | AI / Agents / RAG / LLM / Claude Code / Harness 等 |
+| `['Python', '技术']` | 中等 | Python 库 / NumPy / Pandas / PyTorch |
+| `['技术']` | 偶尔 | 通用工具 / 项目分享，非 AI 非 Python |
+| `['随笔', '投资']` | 罕见 | 行业观察 / 个人思考 |
 
-#### 自动化部署（推荐）
+**禁止**生造 `技术分享` / `AI开发` / `项目实践` / `工具推荐` / `读书笔记`
+等没用过的分类。
 
-1. **触发方式**:
+### tags 池（按真实使用频率）
 
-   - 运行 `./publish.sh` (自动触发)
-   - 或访问 GitHub Actions 页面手动触发
+**AI 高频**：`AI` / `Agents` / `RAG` / `LLM` / `大模型` / `深度学习`
 
-2. **部署流程**:
+**AI 主题**：`LangChain` / `LlamaIndex` / `RAGAS` / `Hugging Face` /
+`Claude Code` / `Harness` / `OpenClaw`
 
-   ```
-   ./publish.sh → GitHub Actions → Docker 构建 → 部署到服务器 → 自动上线
-   ```
+**Python 主题**：`Python` / `NumPy` / `Pandas` / `PyTorch` / `数据分析`
 
-3. **查看状态**:
-   - GitHub Actions: https://github.com/Perlou/go-blog/actions
-   - 容器日志: `ssh root@server && docker-compose logs -f`
+**项目 / 工具**：`开源项目` / `开发工具` / `效率` / `API测试` /
+`Cloudflare` / `React` / `TypeScript`
 
-#### 手动部署
+**随笔类**：`XR` / `Vision Pro` / `Meta Ray-Ban` / `空间计算` / `投资`
 
-```bash
-# 构建静态文件
-hugo --minify
+**约定**：
 
-# 或使用 Docker
-docker build -t go-blog:latest .
-docker-compose up -d
-```
+- AI 类文章必带 `AI`，几乎必带 `Agents`
+- 标签 3-5 个，前两个最具体（如 `LangChain`），后续兜底（如 `AI`、`Agents`）
+- 大小写：`AI` / `RAG` / `LLM` 全大写；`React` / `TypeScript` /
+  `LangChain` 驼峰；`Python` / `Hugging Face` 标准写法
+- 不造单字符标签，不造重复（如同时 `LLM` 和 `大模型` 选一即可）
 
-### 维护命令
+---
 
-```bash
-# 更新主题
-git submodule update --remote --merge
+## 真实标题模式
 
-# 清理缓存
-hugo --cleanDestinationDir
+观察到 14 篇的标题分四类：
 
-# 重启容器
-docker-compose restart
+1. **深度解析 / 完整指南**（最常用）
+   - "深入解析 Ragas"
+   - "LangChain 深入解析：从零开始的完整指南"
+   - "LlamaIndex 深入解析：从零到精通"
+   - "Harness Engineering: AI Agent 时代的工程范式革命"
 
-# 查看容器日志
-docker-compose logs -f
+2. **手册 / 速查**
+   - "NumPy 手册" / "Pandas 手册" / "PyTorch 手册" / "Hugging Face 速查手册"
 
-# 测试 Nginx 配置
-docker exec perlou-blog nginx -t
+3. **全面攻略 / 实战**
+   - "Claude Code 全面攻略"
+   - "OpenClaw 云服务器部署方案"
+   - "常用 RAG 方案解析"
 
-# 清理未使用的 Docker 资源
-docker system prune -a
-```
+4. **项目分享 / 随笔**
+   - "基于 Google Antigravity 开发 Httping：一个轻量级 API 测试工具的诞生"
+   - "关于 XR 行业和 AI 智能眼镜的一些观察"
+   - "大模型入门：原理、架构与实战思考"
 
-## AI 助手工作规范
+写新文章选标题时，**优先按这 4 种模板套**，避免标题党。
 
-### 理解项目上下文
+---
 
-1. **关键文件**:
+## 真实写作风格量化观察
 
-   - `hugo.yaml`: 了解站点配置和功能
-   - `README.md`: 了解项目整体结构
-   - `content/post/`: 查看现有文章的风格和格式
-   - 部署相关文档: 了解工作流程
+- **平均长度**：3000–8000 字（深度解析类）；800–2000 字（项目分享 / 随笔）
+- **结构**：几乎所有技术文都有顶部"目录"section（手动写的 anchor 列表）
+- **章节编号**：深度解析类用"一/二/三"中文编号；其它用 markdown ##
+- **代码块**：100% 带语言标识（` ```python ` 等）
+- **emoji**：适度，集中在标题、章节小标题、列表项首
+- **表格**：高频出现于"对比 / 速查 / 配置参数"类描述
+- **ASCII 图**：偶尔出现（如目录树、流程图、知识图谱）
+- **结尾**：技术文必有"总结 / 一段话精要"；项目分享有"链接 + Star 邀请"
 
-2. **依赖关系**:
-   - 主题作为 Git Submodule，不要直接修改
-   - 自定义配置应在根目录 `hugo.yaml` 中进行
-   - 布局自定义应在项目 `layouts/` 目录中进行
+---
 
-### 执行任务
+## 真实工程化基础设施
 
-1. **创建内容**:
+| 设施 | 现状 |
+|---|---|
+| 主题 | Hugo Theme Stack（git submodule）+ `layouts/` override，**禁止改主题源码** |
+| 性能 | 响应式图片 srcset / DNS prefetch / CSS preload / 评论懒加载（详见 [README.md](../README.md) `⚡ 性能优化` 节） |
+| 部署 | Docker → 阿里云 + Cloudflare CDN，GitHub Actions 触发 |
+| 评论 | Giscus（GitHub Discussions）+ 懒加载 |
+| 分析 | Google Analytics G-CTWSKJMNN4 |
+| 搜索 | Hugo 内置 JSON 索引 |
+| 封面图 | AI 生成（Nano Banana Pro）→ WebP；脚本在 [`scripts/`](../scripts/) |
+| 协作 skill | [`skills/`](../skills/) 三个 SKILL.md（写作 / 配图 / 主题改造） |
 
-   - 使用 `hugo new` 命令创建文章
-   - 遵循文件命名规范
-   - 正确设置 Front Matter
+---
 
-2. **修改配置**:
+## AI 协作时的分工
 
-   - 备份原配置（建议添加到 Git）
-   - 仅修改必要的配置项
-   - 验证 YAML 语法正确性
+**Claude / 其它 LLM 助手** 接到任务时按以下顺序找答案：
 
-3. **自定义布局**:
+| 任务 | 主参考 | 辅助 |
+|---|---|---|
+| 写新博客 | [`blog-writing-prompt-template.md`](./blog-writing-prompt-template.md) | [`skills/blog-writing/SKILL.md`](../skills/blog-writing/SKILL.md) |
+| 配封面图 | [`scripts/README.md`](../scripts/README.md) | [`skills/blog-bg-image/SKILL.md`](../skills/blog-bg-image/SKILL.md) |
+| 改主题样式 | [`skills/hugo-stack-overrides/SKILL.md`](../skills/hugo-stack-overrides/SKILL.md) | [`README.md`](../README.md) `⚡ 性能优化` |
+| 部署 / CI | [`docs/DEPLOYMENT.md`](../docs/DEPLOYMENT.md) | [`Dockerfile`](../Dockerfile) / [`nginx.conf`](../nginx.conf) |
+| 发布文章 | [`docs/PUBLISH_WORKFLOW.md`](../docs/PUBLISH_WORKFLOW.md) | [`publish.sh`](../publish.sh) |
+| 项目边界 / 红线 | [`CLAUDE.md`](../CLAUDE.md) | 本文件 |
 
-   - 先查看主题原始布局
-   - 复制到项目 `layouts/` 后再修改
-   - 添加注释说明修改理由
+---
 
-4. **部署相关**:
-   - 熟悉 `publish.sh` 脚本的使用
-   - 了解 GitHub Secrets 配置
-   - 知道如何查看部署日志
+## 三条红线（与 CLAUDE.md 一致，重复确保）
 
-### 验证与测试
+1. **`themes/` 下任何文件不得修改** —— 改样式走 `layouts/` override
+2. **封面图必须 WebP，路径 `/images/bg/<name>.webp`** —— 文件不存在 build 会挂
+3. **API key 走 `.env`，永不进 git** —— `.gitignore` 已含 `.env`
 
-1. **本地验证**:
+---
 
-   ```bash
-   # 清理并重新启动
-   hugo --cleanDestinationDir
-   hugo server
-   ```
+## 提交信息约定
 
-2. **检查清单**:
+| 前缀 | 用途 | 示例 |
+|---|---|---|
+| `post:` | 发布 / 修改文章 | `post: 发布新文章《Harness Engineering》` |
+| `draft:` | 草稿状态保存 | `draft: WIP RAG 方案对比` |
+| `feat:` | 新增功能 / 脚本 | `feat(scripts): random batch mode` |
+| `fix:` | 修复 bug | `fix: 修复评论懒加载在 Safari 失效` |
+| `style:` | 样式 / 布局调整 | `style: 优化文章列表移动端间距` |
+| `docs:` | 更新文档 | `docs: 补充 Cloudflare 配置指南` |
+| `config:` | 配置文件修改 | `config: 调整 Nginx gzip 等级` |
+| `chore:` | 杂项 / 主题升级 | `chore: bump theme to v3.30` |
 
-   - [ ] 文章/页面正常显示
-   - [ ] 图片正确加载
-   - [ ] 链接可以点击
-   - [ ] 分类/标签正确
-   - [ ] SEO 信息完整
-   - [ ] 响应式布局正常
+---
 
-3. **部署前检查**:
-   - [ ] 所有 draft 文章已设置为 false（如需发布）
-   - [ ] 图片路径使用相对路径或 CDN
-   - [ ] 外部链接使用 HTTPS
-   - [ ] 配置文件 baseurl 正确
+## 不要做的事（项目级别）
 
-## 故障排查
+- ❌ 不要用 `hugo new` 之外的方式新建文章（会缺 archetype 默认字段）
+- ❌ 不要在文章 markdown 里直接 `<img>` 远端 URL（不可靠且不会进 srcset）
+- ❌ 不要在 front matter 加非约定字段（如 `description`、`summary` 等；
+   主题不消费这些）
+- ❌ 不要在 `content/page/` 下乱建页面（约定只有 about / archives /
+   links / search 四种）
+- ❌ 不要为了 SEO 堆关键词标签
+- ❌ 不要为了"美观"在文章里加大量 emoji（破坏专业感）
+- ❌ 不要修改 `archetypes/default.md` 把模板复杂化
+- ❌ 不要在新文章里引入主题不支持的 shortcode
+- ❌ 不要把 `docker-compose.yml` 里的端口改掉（生产服务器依赖默认 80）
 
-### 常见问题
+---
 
-1. **图片不显示**:
+## 故障排查（常见的 4 个）
 
-   - 检查图片路径是否正确
-   - 确认图片在 `static/` 目录中
-   - 验证文件名大小写
+| 症状 | 排查 |
+|---|---|
+| 本地预览图片 404 | `image` 字段路径必须 `/images/bg/<file>.webp`，文件须真实存在；不要写 `/static/...` |
+| 主题样式丢失 | `git submodule update --init --recursive` |
+| 部署失败 | GitHub Actions 日志；常见是 `image` 引用不存在 / front matter 语法错 |
+| 文章不显示 | `draft: false` 是否设了；日期是否未来时间 |
 
-2. **主题样式丢失**:
+---
 
-   - 检查主题 submodule 是否正确初始化
-   - 运行 `git submodule update --init --recursive`
+## 维护节奏（项目级目标）
 
-3. **404 错误**:
-
-   - 检查 baseurl 配置
-   - 确认页面 Front Matter 中没有 `draft: true`
-
-4. **部署失败**:
-   - 查看 GitHub Actions 日志
-   - 检查 GitHub Secrets 配置
-   - 验证服务器 SSH 连接
-
-### 日志位置
-
-- **本地开发**: 终端输出
-- **GitHub Actions**: https://github.com/Perlou/go-blog/actions
-- **服务器容器**: `docker-compose logs -f`
-- **Nginx 日志**: `/var/log/nginx/` (容器内)
-
-## 参考资源
-
-- [Hugo 官方文档](https://gohugo.io/documentation/)
-- [Hugo Theme Stack 文档](https://stack.jimmycai.com/)
-- [Markdown 语法参考](https://www.markdownguide.org/)
-- [TOML 格式参考](https://toml.io/)
-- [Giscus 官网](https://giscus.app/)
-
-## 重要提醒
-
-1. **不要修改主题源码**: 所有自定义应通过覆盖的方式进行
-2. **使用版本控制**: 所有修改都应提交到 Git
-3. **配置 baseURL**: 本地和生产环境使用不同的 baseURL
-4. **图片优化**: 上传前压缩图片以提升加载速度
-5. **测试后部署**: 本地测试无误后再发布到生产环境
-6. **备份重要数据**: 定期备份 `content/` 和配置文件
+- 写作频率：每月 1-2 篇深度文，间杂随笔 / 手册
+- 主题升级：观望 1-2 个 release 再升，避免破窗
+- 性能优化：每季度回测一次 Lighthouse；目标 Performance ≥ 95
+- AI 工具：紧跟 Claude Code / Cursor / 主流 LLM 的能力边界（与博客主题
+  自然契合）
