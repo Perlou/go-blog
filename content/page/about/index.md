@@ -15,7 +15,7 @@ menu:
       icon: user
 ---
 
-Hi！我是 Perlou，INFJ-A，佬</br>
+Hi！我是 Perlou，INFJ-A，L站佬友</br>
 半吊子全栈工程师，往AI方向转型中
 
 ## 📫 联系方式
